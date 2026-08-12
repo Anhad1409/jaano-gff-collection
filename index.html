@@ -417,7 +417,7 @@
     <h1>The Jaano Collection</h1>
     <p>One card, six premium directions — same story in every one: configurability leads,
     the three verification modes (officer-led, self, AI avatar) read at a glance, and every
-    claim maps to shipped capability. Pick the skin; the substance is constant. Below the six full renditions: the Exploration Wall — twenty further front-card concepts, each with its design idea.</p>
+    claim maps to shipped capability. Pick the skin; the substance is constant. Below the six full renditions: the Print Atelier — eight physical concepts, front and back, where the intrigue is built into the substrate (die-cuts, scratch latex, foil, letterpress), not the screen.</p>
   </header>
 
   <nav class="vnav" aria-label="Versions">
@@ -427,7 +427,7 @@
     <a href="#v4">V4 &middot; Obsidian Holo</a>
     <a href="#v5">V5 &middot; The Knowing Issue</a>
     <a href="#v6">V6 &middot; Zari</a>
-    <a href="#wall">The Wall &middot; 20 concepts</a>
+    <a href="#atelier">The Atelier &middot; 8 print concepts</a>
   </nav>
 
   <!-- ================================================== V1 -->
@@ -1153,579 +1153,625 @@
   </section>
 
 <style>
-  /* ============ THE EXPLORATION WALL — 20 concepts ============ */
-  .cwall{ padding-top:44px; }
-  .cgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:46px 38px; margin-top:30px; }
-  .cslot{ display:flex; flex-direction:column; gap:12px; }
-  .cmeta{ display:flex; align-items:baseline; gap:12px; }
-  .cmeta .cno{ font-family:var(--mono); font-size:10px; letter-spacing:0.2em; color:var(--lilac); }
-  .cmeta h3{ font-family:var(--serif); font-weight:400; font-size:19px; color:var(--page-ink); }
-  .cidea{ font-size:12.5px; line-height:1.6; color:var(--page-dim); }
-  .cc{
-    position:relative; overflow:hidden; aspect-ratio:62/82; width:100%;
-    border-radius:18px; padding:8% 8.5%; display:flex; flex-direction:column;
-    container-type:inline-size; border:1px solid rgba(237,230,214,0.13);
-    box-shadow:0 26px 60px rgba(0,0,0,0.45);
-  }
-  .cc > *{ position:relative; z-index:2; }
-  .cc .top{ display:flex; justify-content:space-between; align-items:center; font-size:9px; letter-spacing:0.22em; text-transform:uppercase; }
-  .cc .foot{ margin-top:auto; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; }
+  /* ============ THE PRINT ATELIER — 8 physical concepts, front + back ============ */
+  .atelier{ padding-top:44px; }
+  .pset{ margin-top:64px; }
+  .pset:first-of-type{ margin-top:30px; }
+  .pmeta{ display:flex; align-items:baseline; gap:14px; margin-bottom:6px; }
+  .pmeta .cno{ font-family:var(--mono); font-size:10px; letter-spacing:0.2em; color:var(--lilac); }
+  .pmeta h3{ font-family:var(--serif); font-weight:400; font-size:26px; color:var(--page-ink); }
+  .pidea{ font-size:14px; line-height:1.6; color:var(--page-dim); max-width:74ch; margin-bottom:8px; }
+  .pspec{ font-family:var(--mono); font-size:10px; letter-spacing:0.08em; color:var(--page-faint); text-transform:uppercase; margin-bottom:22px; }
+  .pspec b{ color:var(--lilac); font-weight:400; }
+  .atelier .card{ box-shadow:0 34px 80px rgba(0,0,0,0.5); }
 
-  /* C01 Specimen */
-  .c01{ background:linear-gradient(170deg,#F7F5EE,#EDE9DC); color:#242B36; }
-  .c01 .guill{ position:absolute; inset:0; z-index:1; opacity:0.5; }
-  .c01 .stamp{
-    position:absolute; z-index:1; top:38%; left:-6%; right:-6%; text-align:center;
-    font-family:"Archivo",sans-serif; font-weight:700; font-size:15cqw; letter-spacing:0.28em;
-    color:rgba(109,40,217,0.08); transform:rotate(-14deg);
+  /* ————— P01 SPECIMEN ————— */
+  .p01f{ background:linear-gradient(168deg,#F7F3E8,#EFE9D8); color:#2A2A33; }
+  .p01f .guil, .p01b .guil{ position:absolute; inset:0; z-index:1; }
+  .p01f .hdr{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:8.5px; letter-spacing:0.2em; color:#7A7466; text-transform:uppercase; }
+  .p01f .body{ flex:1; display:flex; gap:6%; margin-top:7%; }
+  .p01f .photo{
+    width:38%; aspect-ratio:3.4/4.4; border:1px solid rgba(42,42,51,0.35); border-radius:6px;
+    background:linear-gradient(170deg,#EDE7D3,#E2DBC4); position:relative; overflow:hidden; flex:none;
+    display:flex; align-items:center; justify-content:center;
   }
-  .c01 .mid{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:5%; }
-  .c01 .kind{ font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#7A716B; }
-  .c01 .brand{ font-family:var(--serif); font-size:15cqw; line-height:1; color:#242B36; }
-  .c01 .hook{ font-family:var(--serif); font-style:italic; font-size:4.6cqw; color:#4A423F; max-width:22ch; }
-  .c01 .mrz{
-    margin-top:auto; font-family:var(--mono); font-size:10.5px; letter-spacing:0.08em;
-    color:#3A4149; border-top:1.5px solid #242B36; padding-top:10px; line-height:1.8;
-    word-break:break-all;
+  .p01f .photo .dv{ font-family:var(--deva); font-size:19cqw; color:rgba(42,42,51,0.16); line-height:1; }
+  .p01f .photo .cap{ position:absolute; bottom:6px; left:0; right:0; text-align:center; font-family:var(--mono); font-size:7px; letter-spacing:0.18em; color:#8A8372; }
+  .p01f .fields{ flex:1; display:flex; flex-direction:column; gap:9px; }
+  .p01f .fld label{ display:block; font-family:var(--mono); font-size:7px; letter-spacing:0.2em; text-transform:uppercase; color:#8A8372; margin-bottom:1px; }
+  .p01f .fld div{ font-family:var(--serif); font-size:13.5px; color:#23232B; letter-spacing:0.04em; }
+  .p01f .kine{
+    position:absolute; z-index:3; right:8%; top:34%; width:17%; aspect-ratio:0.78; border-radius:50%;
+    background:conic-gradient(from 200deg, rgba(125,232,240,0.55), rgba(167,139,250,0.55), rgba(240,158,199,0.5), rgba(245,223,160,0.5), rgba(125,232,240,0.55));
+    mix-blend-mode:multiply; opacity:0.75; border:1px solid rgba(42,42,51,0.2);
   }
-  /* C02 Redacted */
-  .c02{ background:linear-gradient(175deg,#1B1D22,#121317); color:#D9D5CB; }
-  .c02 .cls{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:9px; letter-spacing:0.22em; color:#8E8878; text-transform:uppercase; }
-  .c02 .file{ border:1px solid rgba(217,213,203,0.2); border-radius:10px; padding:7% 7.5%; margin-top:8%; display:flex; flex-direction:column; gap:14px; }
-  .c02 .brand{ font-family:var(--serif); font-size:12cqw; color:#EDE6D6; }
-  .c02 p{ font-family:var(--mono); font-size:11px; line-height:2; color:#B8B2A4; }
-  .c02 .red{ background:#0A0A0C; color:transparent; border-radius:2px; padding:1px 4px; transition:all .45s; cursor:default; }
-  .c02 .cc:hover .red{ }
-  .c02 .card-hover-note{ font-family:var(--mono); font-size:8.5px; letter-spacing:0.18em; color:#6E695E; text-transform:uppercase; }
-  .cc.c02:hover .red{ background:rgba(167,139,250,0.14); color:#EDE6D6; }
-  /* C03 Polygraph */
-  .c03{ background:linear-gradient(178deg,#F6F2E8,#EFE9DA); color:#292423; }
-  .c03 .chart{ flex:1; display:flex; align-items:center; }
-  .c03 svg{ width:100%; height:auto; }
-  .c03 .wave{ stroke:#B3232A; stroke-width:1.6; fill:none; stroke-dasharray:640; stroke-dashoffset:640; animation:draw 5s linear infinite; }
-  @keyframes draw{ 0%{ stroke-dashoffset:640; } 70%{ stroke-dashoffset:0; } 100%{ stroke-dashoffset:0; } }
-  .c03 .gridl{ stroke:rgba(41,36,35,0.1); stroke-width:1; }
-  .c03 .brand{ font-family:var(--serif); font-size:11cqw; }
-  .c03 .hook{ font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#8A2C30; }
-  /* C04 Guilloché */
-  .c04{ background:radial-gradient(120% 100% at 50% 0%,#12352A,#0A241C 70%); color:#D8CDA8; }
-  .c04 .rosette{ position:absolute; z-index:1; inset:auto -22% -30% auto; width:95%; opacity:0.55; }
-  .c04 .brand{ font-family:var(--serif); font-size:13cqw; color:#E7DDBB; }
-  .c04 .mid{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:6%; }
-  .c04 .hook{ font-family:var(--serif); font-style:italic; font-size:4.8cqw; max-width:20ch; color:#C9BE9B; }
-  .c04 .denom{ font-family:var(--serif); font-size:26px; color:#B9AD85; }
-  /* C05 Obscura */
-  .c05{ background:#060507; color:#CFC8BA; cursor:crosshair; }
-  .c05 .veil{
-    position:absolute; inset:0; z-index:3; pointer-events:none;
-    background:radial-gradient(circle 130px at var(--mx,68%) var(--my,38%), transparent 0 60px, rgba(6,5,7,0.94) 130px);
-    animation:roam 11s ease-in-out infinite alternate;
+  .p01f .brand{ font-family:var(--serif); font-size:9cqw; color:#23232B; margin-top:5%; }
+  .p01 .mrz{
+    margin-top:4.5%; font-family:var(--mono); font-size:10px; letter-spacing:0.06em; line-height:1.85;
+    color:#33333D; border-top:1.5px solid #2A2A33; padding-top:9px; word-break:break-all;
   }
-  .c05:hover .veil{ animation:none; }
-  @keyframes roam{ 0%{ --mx:68%; --my:38%; } 25%{ --mx:30%; --my:30%; } 50%{ --mx:42%; --my:62%; } 100%{ --mx:64%; --my:55%; } }
-  @property --mx { syntax:'<percentage>'; inherits:false; initial-value:68%; }
-  @property --my { syntax:'<percentage>'; inherits:false; initial-value:38%; }
-  .c05 .mid{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:7%; }
-  .c05 .brand{ font-family:var(--serif); font-size:13cqw; color:#EDE6D6; }
-  .c05 .hook{ font-family:var(--serif); font-style:italic; font-size:5.4cqw; line-height:1.4; color:#B9B2A2; max-width:18ch; }
-  .c05 .foot{ color:#6B6559; }
-  /* C06 X-Ray */
-  .c06{ background:radial-gradient(110% 90% at 50% 30%,#0B2338,#050D16 75%); color:#9FC6E8; }
-  .c06 .scan{ position:absolute; z-index:1; left:12%; right:12%; top:16%; bottom:30%; }
-  .c06 .sil{ fill:none; stroke:rgba(159,198,232,0.75); stroke-width:1.4; filter:drop-shadow(0 0 6px rgba(125,232,240,0.6)); }
-  .c06 .scanline{ position:absolute; z-index:2; left:0; right:0; height:1.5px; background:linear-gradient(90deg,transparent,rgba(125,232,240,0.9),transparent); animation:scan 4.5s ease-in-out infinite alternate; top:20%; }
-  @keyframes scan{ from{ top:18%; } to{ top:68%; } }
-  .c06 .brand{ font-family:"Archivo",sans-serif; font-weight:600; letter-spacing:0.24em; font-size:6.5cqw; color:#D7E9F8; }
-  .c06 .hook{ margin-top:auto; font-family:var(--mono); font-size:10.5px; letter-spacing:0.12em; color:#7FA8CC; text-transform:uppercase; }
-  /* C07 The Interview */
-  .c07{ background:linear-gradient(180deg,#141210,#0B0A09); color:#D6CFC2; font-family:"Courier New",Courier,monospace; }
-  .c07 .script{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:16px; font-size:11.5px; line-height:1.75; }
-  .c07 .slug{ color:#8F887A; letter-spacing:0.06em; }
-  .c07 .char{ text-align:center; letter-spacing:0.18em; color:#EDE6D6; }
-  .c07 .dlg{ text-align:center; max-width:30ch; margin:0 auto; color:#C4BCAC; }
-  .c07 .action{ color:#A79F8F; }
-  .c07 .brand{ font-family:var(--serif); font-size:9cqw; color:#EDE6D6; text-align:center; }
-  /* C08 Chiaroscuro */
-  .c08{ background:radial-gradient(130% 110% at 18% 8%, #3B2E1E 0%, #17110C 42%, #070504 78%); color:#D9C9AC; }
-  .c08 .mid{ flex:1; display:flex; flex-direction:column; justify-content:flex-end; gap:5%; padding-bottom:6%; }
-  .c08 .brand{ font-family:"Cormorant Garamond",serif; font-weight:500; font-size:15cqw; color:#EFE2C6; }
-  .c08 .hook{ font-family:"Cormorant Garamond",serif; font-style:italic; font-size:5.6cqw; line-height:1.35; color:#C3B292; max-width:20ch; }
-  /* C09 Helvetic */
-  .c09{ background:#F4F4F2; color:#111; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; }
-  .c09 .rule{ position:absolute; z-index:1; left:8.5%; right:8.5%; top:26%; height:1px; background:#111; }
-  .c09 .big{ flex:1; display:flex; flex-direction:column; justify-content:center; font-weight:700; font-size:13.5cqw; line-height:1.02; letter-spacing:-0.01em; }
-  .c09 .big em{ font-style:normal; color:#E0301E; }
-  .c09 .sub{ font-size:11px; line-height:1.5; color:#444; max-width:30ch; }
-  .c09 .foot{ color:#777; }
-  /* C10 Bauhaus */
-  .c10{ background:#EFE7D8; color:#20242C; }
-  .c10 .geo{ position:absolute; z-index:1; inset:0; }
-  .c10 .mid{ flex:1; display:flex; flex-direction:column; justify-content:flex-end; gap:4%; }
-  .c10 .brand{ font-family:"Archivo",sans-serif; font-weight:700; font-size:11cqw; letter-spacing:0.02em; }
-  .c10 .hook{ font-size:11.5px; line-height:1.55; color:#4A4A48; max-width:26ch; }
-  /* C11 Op-Art Iris */
-  .c11{ background:#0D0C0F; color:#E8E4DA; display:flex; }
-  .c11 .iris{
-    position:absolute; z-index:1; width:120%; aspect-ratio:1; left:50%; top:42%; transform:translate(-50%,-50%);
-    background:repeating-radial-gradient(circle at 50% 50%, #E8E4DA 0 1.5px, #0D0C0F 1.5px 7px);
-    border-radius:50%; opacity:0.5; animation:irisPulse 9s ease-in-out infinite;
+  .p01b{ background:linear-gradient(168deg,#F5F0E2,#ECE5D2); color:#2A2A33; }
+  .p01b .hdr{ font-family:var(--mono); font-size:8.5px; letter-spacing:0.22em; color:#7A7466; text-transform:uppercase; display:flex; justify-content:space-between; }
+  .p01b .obs{ font-family:var(--serif); font-style:italic; font-size:4.6cqw; color:#40404A; margin-top:5%; max-width:30ch; }
+  .p01b .stamps{ flex:1; position:relative; margin-top:2%; }
+  .p01b .st{ position:absolute; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; text-transform:uppercase; }
+  .p01b .st .big{ font-weight:700; letter-spacing:0.14em; }
+  .p01b .st .sm{ letter-spacing:0.18em; font-size:0.72em; opacity:0.85; }
+  .p01b .st1{
+    left:2%; top:4%; width:52%; aspect-ratio:2.6/1; border:2.5px solid #6D28D9; border-radius:10px;
+    color:#6D28D9; transform:rotate(-7deg); font-family:"Archivo",sans-serif; font-size:12.5px; gap:3px; opacity:0.92;
   }
-  @keyframes irisPulse{ 0%,100%{ transform:translate(-50%,-50%) scale(1);} 50%{ transform:translate(-50%,-50%) scale(1.06);} }
-  .c11 .pupil{ position:absolute; z-index:1; width:15%; aspect-ratio:1; border-radius:50%; background:#A78BFA; left:50%; top:42%; transform:translate(-50%,-50%); box-shadow:0 0 40px rgba(167,139,250,0.7); }
-  .c11 .brand{ font-family:var(--serif); font-size:11cqw; text-align:center; }
-  .c11 .hook{ margin-top:auto; text-align:center; font-family:var(--serif); font-style:italic; font-size:4.8cqw; color:#B9B4A8; }
-  /* C12 Topograph */
-  .c12{ background:linear-gradient(180deg,#101816,#0A100E); color:#BFD9C9; }
-  .c12 .topo{ position:absolute; z-index:1; inset:-10%; opacity:0.6; }
-  .c12 .topo path{ fill:none; stroke:rgba(191,217,201,0.4); stroke-width:1; }
-  .c12 .topo path.hot{ stroke:#8FE0B0; stroke-width:1.4; filter:drop-shadow(0 0 5px rgba(143,224,176,0.5)); }
-  .c12 .brand{ font-family:var(--serif); font-size:12cqw; color:#E4F0E7; }
-  .c12 .hook{ margin-top:auto; font-family:var(--serif); font-style:italic; font-size:4.9cqw; color:#9DBBA9; max-width:20ch; }
-  /* C13 Constellation */
-  .c13{ background:radial-gradient(120% 100% at 70% 0%,#131A33,#080B18 70%); color:#D5DCF2; }
-  .c13 .sky{ position:absolute; z-index:1; inset:0; }
-  .c13 .sky line{ stroke:rgba(213,220,242,0.3); stroke-width:0.8; }
-  .c13 .sky circle{ fill:#D5DCF2; }
-  .c13 .sky circle.br{ fill:#A78BFA; filter:drop-shadow(0 0 4px rgba(167,139,250,0.9)); }
-  .c13 .brand{ font-family:var(--serif); font-size:12cqw; }
-  .c13 .hook{ margin-top:auto; font-family:var(--serif); font-style:italic; font-size:4.9cqw; color:#A8B1D6; max-width:22ch; }
-  /* C14 Liquid Chrome */
-  .c14{ background:linear-gradient(170deg,#1A1B1E,#0E0F11); color:#DDE0E6; }
-  .c14 .blob{
-    position:absolute; z-index:1; width:85%; aspect-ratio:1; left:50%; top:46%; transform:translate(-50%,-50%);
-    border-radius:44% 56% 58% 42% / 48% 42% 58% 52%;
-    background:conic-gradient(from 30deg, #F2F4F8, #9BA3B0, #5E646E, #E8EBF1, #7C828C, #F2F4F8);
-    filter:blur(1px) saturate(0.9); opacity:0.9;
-    animation:blobMorph 12s ease-in-out infinite alternate;
+  .p01b .st2{
+    right:0%; top:20%; width:46%; aspect-ratio:1.9/1; border:2.5px double #0F766E; border-radius:50%;
+    color:#0F766E; transform:rotate(6deg); font-family:"Archivo",sans-serif; font-size:10.5px; gap:2px; opacity:0.88;
   }
-  @keyframes blobMorph{
-    from{ border-radius:44% 56% 58% 42% / 48% 42% 58% 52%; transform:translate(-50%,-50%) rotate(0deg); }
-    to{ border-radius:56% 44% 42% 58% / 42% 58% 44% 56%; transform:translate(-50%,-50%) rotate(24deg); }
+  .p01b .st3{
+    left:6%; top:44%; width:55%; aspect-ratio:2.9/1; border:2.5px solid #A93443; border-radius:8px;
+    color:#A93443; transform:rotate(4deg); font-family:"Archivo",sans-serif; font-size:11.5px; gap:3px; opacity:0.9;
   }
-  .c14 .blob::after{ content:""; position:absolute; inset:12%; border-radius:inherit; background:radial-gradient(60% 60% at 35% 30%, rgba(255,255,255,0.9), transparent 60%); mix-blend-mode:screen; }
-  .c14 .brand{
-    font-family:"Archivo",sans-serif; font-weight:700; font-size:11cqw; letter-spacing:0.1em;
-    background:linear-gradient(105deg,#FDFDFF 0%,#8D939E 30%,#F4F6FA 50%,#6A707A 72%,#FDFDFF 100%);
-    background-size:200% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
-    animation:shimmer 6s ease-in-out infinite;
+  .p01b .st4{
+    right:3%; bottom:16%; width:48%; aspect-ratio:2.2/1; border:2px solid #26221C; border-radius:50%;
+    color:#26221C; transform:rotate(-5deg); font-family:var(--mono); font-size:9px; gap:3px; opacity:0.85;
   }
-  .c14 .hook{ margin-top:auto; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:#9AA0AB; }
-  /* C15 Blueprint */
-  .c15{
-    background:
-      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px) 0 0/28px 28px,
-      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px) 0 0/28px 28px,
-      linear-gradient(175deg,#123A63,#0C2846);
-    color:#D7E6F5; font-family:"Archivo",sans-serif;
+  .p01b .st5{
+    left:14%; bottom:0%; width:44%; aspect-ratio:2.7/1; border:2px solid #6D28D9; border-radius:6px;
+    color:#6D28D9; transform:rotate(-2deg); font-family:var(--mono); font-size:9px; gap:2px; opacity:0.75;
   }
-  .c15 .draw{ flex:1; display:flex; align-items:center; }
-  .c15 svg{ width:100%; height:auto; }
-  .c15 .ln{ fill:none; stroke:#D7E6F5; stroke-width:1.2; }
-  .c15 .dim{ stroke:rgba(215,230,245,0.5); stroke-width:0.8; }
-  .c15 text{ font-family:var(--mono); font-size:5.5px; fill:rgba(215,230,245,0.75); letter-spacing:0.08em; }
-  .c15 .brand{ font-weight:600; letter-spacing:0.22em; font-size:6cqw; }
-  .c15 .hook{ font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#9DBAD6; }
-  /* C16 Negative Space */
-  .c16{ background:#F9F7F1; color:#1E1B17; }
-  .c16 .mid{ flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:18px; }
-  .c16 .line1{ font-family:var(--serif); font-style:italic; font-size:5.4cqw; color:#1E1B17; }
-  .c16 .line2{ font-size:10px; letter-spacing:0.26em; text-transform:uppercase; color:#6D28D9; }
-  .c16 .top,.c16 .foot{ color:#9A948A; }
-  /* C17 Hash Rain */
-  .c17{ background:#0A0C0A; color:#9BAA9B; font-family:var(--mono); }
-  .c17 .rain{ position:absolute; z-index:1; inset:6% 8%; font-size:10px; line-height:2.1; letter-spacing:0.12em; color:rgba(155,170,155,0.28); word-break:break-all; }
-  .c17 .rain b{ font-weight:400; color:#EDE6D6; background:rgba(167,139,250,0.12); border-radius:3px; padding:0 3px; }
-  .c17 .brand{ font-family:var(--serif); font-size:11cqw; color:#EDE6D6; }
-  .c17 .hook{ margin-top:auto; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#7C8A7C; }
-  /* C18 Contact Sheet */
-  .c18{ background:#141210; color:#D8D2C6; }
-  .c18 .strip{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:10px; }
-  .c18 .frame{
-    border:1px solid rgba(216,210,198,0.25); border-radius:4px; padding:9px 12px;
-    display:flex; justify-content:space-between; align-items:center;
-    background:linear-gradient(90deg, rgba(167,139,250,0.06), transparent);
-    font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase;
-  }
-  .c18 .frame i{ font-style:normal; color:#8F887B; }
-  .c18 .sprock{ display:flex; justify-content:space-between; padding:0 4px; }
-  .c18 .sprock span{ width:7px; height:9px; border-radius:2px; background:rgba(216,210,198,0.22); }
-  .c18 .brand{ font-family:var(--serif); font-size:10cqw; color:#EDE6D6; }
-  .c18 .hook{ margin-top:auto; font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#8F887B; }
-  /* C19 Members' Club */
-  .c19{
-    background:
-      radial-gradient(0.9px 0.9px at 9px 9px, rgba(0,0,0,0.35) 1px, transparent 1.1px) 0 0/18px 18px,
-      linear-gradient(172deg,#4A1620,#33101A 60%,#260C13);
-    color:#E6D3B3;
-  }
-  .c19 .brass{ border:1px solid rgba(230,211,179,0.4); border-radius:12px; flex:1; margin-top:7%; padding:9% 8%; display:flex; flex-direction:column; justify-content:center; text-align:center; gap:7%; }
-  .c19 .small{ font-size:9px; letter-spacing:0.34em; text-transform:uppercase; color:#B99F78; }
-  .c19 .brand{ font-family:var(--serif); font-size:12cqw; color:#F2E3C4; }
-  .c19 .hook{ font-family:var(--serif); font-style:italic; font-size:4.9cqw; color:#D3BC95; }
-  /* C20 Sonar */
-  .c20{ background:radial-gradient(120% 110% at 50% 46%, #0C2B2B 0%, #061414 65%, #040D0D 100%); color:#BFE3DD; }
-  .c20 .rings{ position:absolute; z-index:1; left:50%; top:44%; transform:translate(-50%,-50%); width:10px; height:10px; }
-  .c20 .rings i{
-    position:absolute; inset:0; border-radius:50%; border:1px solid rgba(140,224,208,0.7);
-    animation:ping 4.2s cubic-bezier(0,0.4,0.6,1) infinite;
-  }
-  .c20 .rings i:nth-child(2){ animation-delay:1.4s; } .c20 .rings i:nth-child(3){ animation-delay:2.8s; }
-  @keyframes ping{ from{ transform:scale(1); opacity:0.9; } to{ transform:scale(34); opacity:0; } }
-  .c20 .dot{ position:absolute; z-index:1; left:50%; top:44%; transform:translate(-50%,-50%); width:9px; height:9px; border-radius:50%; background:#8CE0D0; box-shadow:0 0 18px rgba(140,224,208,0.9); }
-  .c20 .brand{ font-family:var(--serif); font-size:12cqw; color:#E2F4F0; }
-  .c20 .hook{ margin-top:auto; font-family:var(--serif); font-style:italic; font-size:4.9cqw; color:#9CC8C0; }
 
-  @media (prefers-reduced-motion: reduce){
-    .c03 .wave,.c05 .veil,.c06 .scanline,.c11 .iris,.c14 .blob,.c14 .brand,.c20 .rings i{ animation:none; }
-    .c02 .red{ background:rgba(167,139,250,0.14); color:#EDE6D6; }
+  /* ————— P02 THE SCRATCH ————— */
+  .p02f{ background:linear-gradient(172deg,#1A171E,#121016); color:#E8E2D4; }
+  .p02f .say{ font-family:var(--serif); font-size:6.2cqw; line-height:1.35; margin-top:9%; max-width:18ch; color:#EDE6D6; }
+  .p02f .say i{ color:#A78BFA; }
+  .p02f .panelwrap{ flex:1; display:flex; align-items:center; }
+  .p02f .panel{ position:relative; width:100%; aspect-ratio:2.6/1; }
+  .p02f .under{
+    position:absolute; inset:0; border-radius:10px; background:#221E2B; border:1px solid rgba(167,139,250,0.3);
+    display:flex; align-items:center; justify-content:flex-end; text-align:right; padding:0 4% 0 7%;
+    font-family:var(--serif); font-style:italic; font-size:4.2cqw; color:#C9B8FF;
   }
-  @media print{
-    .c05 .veil{ background:radial-gradient(circle 130px at 60% 42%, transparent 0 60px, rgba(6,5,7,0.94) 130px); }
-    .c03 .wave{ stroke-dashoffset:0; animation:none; }
+  .p02f .latex{
+    position:absolute; inset:0; border-radius:10px;
+    background:
+      repeating-linear-gradient(100deg, rgba(255,255,255,0.14) 0 1px, transparent 1px 3px),
+      linear-gradient(105deg,#D9DBDE 0%,#9EA3A9 30%,#EAECEF 50%,#878C93 72%,#D5D8DB 100%);
+    clip-path:polygon(0 0, 100% 0, 100% 38%, 88% 46%, 96% 58%, 84% 66%, 93% 80%, 86% 100%, 0 100%);
+  }
+  .p02f .latex span{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-family:"Archivo",sans-serif; font-weight:600; font-size:10px; letter-spacing:0.34em; color:#5A5F66; text-transform:uppercase;
+  }
+  .p02f .cue{ font-family:var(--mono); font-size:9.5px; letter-spacing:0.26em; text-transform:uppercase; color:#8F8A7D; }
+  .p02b{ background:linear-gradient(172deg,#18151C,#100E14); color:#E8E2D4; }
+  .p02b .bh{ font-family:var(--serif); font-size:6.4cqw; color:#EDE6D6; margin-top:5%; }
+  .p02b .bh i{ color:#A78BFA; }
+  .p02b .mani{ flex:1; display:flex; flex-direction:column; justify-content:space-evenly; margin-top:2%; }
+  .p02b .strip{ position:relative; }
+  .p02b .strip label{ font-family:var(--mono); font-size:8px; letter-spacing:0.22em; color:#8F8A7D; text-transform:uppercase; display:block; margin-bottom:5px; }
+  .p02b .strip .rv{
+    border-radius:8px; padding:9px 13px; background:#221E2B; border:1px solid rgba(167,139,250,0.28);
+    font-family:var(--serif); font-size:13.5px; color:#E9DFC8; position:relative; overflow:hidden;
+  }
+  .p02b .strip .rv b{ font-weight:400; font-style:italic; color:#C9B8FF; }
+  .p02b .strip .fleck{
+    position:absolute; right:-4px; top:-6px; width:34px; height:150%;
+    background:linear-gradient(105deg,#C9CCD0,#8C9198); clip-path:polygon(38% 0,100% 0,100% 100%,20% 100%,52% 62%,30% 34%);
+  }
+
+  /* ————— P03 GROUND GLASS ————— */
+  .p03f{ background:#101318; color:#E9EBEF; }
+  .p03f .blur{ position:absolute; inset:0; z-index:1; filter:blur(26px) saturate(1.1); opacity:0.9; }
+  .p03f .blur i{ position:absolute; border-radius:50%; }
+  .p03f .blur i:nth-child(1){ width:44%; height:30%; left:26%; top:16%; background:#C9A87A; }
+  .p03f .blur i:nth-child(2){ width:30%; height:22%; left:34%; top:40%; background:#8A93AC; }
+  .p03f .blur i:nth-child(3){ width:56%; height:26%; left:20%; top:58%; background:#4A5470; }
+  .p03f .blur i:nth-child(4){ width:20%; height:14%; left:44%; top:30%; background:#E0C9A2; }
+  .p03f .pane{
+    position:absolute; inset:0; z-index:2;
+    background:linear-gradient(160deg, rgba(233,235,239,0.16), rgba(233,235,239,0.05));
+  }
+  .p03f .plate{
+    background:rgba(16,19,24,0.82); border:1px solid rgba(233,235,239,0.3); border-radius:12px;
+    padding:7% 8%; margin-top:auto; display:flex; flex-direction:column; gap:10px;
+  }
+  .p03f .plate .brand{ font-family:var(--serif); font-size:8.5cqw; color:#F2F3F5; }
+  .p03f .plate .hook{ font-family:var(--serif); font-style:italic; font-size:4.4cqw; color:#C3C8D2; }
+  .p03b{ background:linear-gradient(170deg,#F4F5F7,#E9EBEF); color:#191C22; }
+  .p03b .focus{ flex:1; display:flex; align-items:center; justify-content:center; position:relative; }
+  .p03b .focus svg{ width:62%; }
+  .p03b .focus .ln{ fill:none; stroke:#191C22; stroke-width:1.6; }
+  .p03b .callout{ position:absolute; font-family:var(--mono); font-size:8.5px; letter-spacing:0.14em; color:#4C5566; text-transform:uppercase; }
+  .p03b .callout::before{ content:""; display:inline-block; width:22px; height:1px; background:#4C5566; vertical-align:middle; margin-right:6px; }
+  .p03b .co1{ right:2%; top:22%; } .p03b .co2{ right:0%; top:44%; } .p03b .co3{ right:4%; top:66%; }
+  .p03b .bh{ font-family:var(--serif); font-size:6cqw; color:#14161B; }
+  .p03b .bh i{ color:#6D28D9; }
+  .p03b .bsub{ font-size:11.5px; line-height:1.6; color:#4C5160; max-width:34ch; margin-top:8px; }
+
+  /* ————— P04 APERTURE ————— */
+  .p04f{ background:radial-gradient(120% 100% at 50% 0%, #16141A, #0B0A0E 70%); color:#D8CFBB; }
+  .p04f .ringzone{ flex:1; display:flex; align-items:center; justify-content:center; position:relative; }
+  .p04f .ringsvg{ width:78%; }
+  .p04f .ringsvg text{ font-family:"Archivo",sans-serif; font-size:7.5px; letter-spacing:3.2px; fill:#B49B5E; text-transform:uppercase; }
+  .p04f .hole{
+    position:absolute; width:46%; aspect-ratio:1; border-radius:50%;
+    background:#070609;
+    box-shadow: inset 0 10px 26px rgba(0,0,0,0.95), inset 0 -3px 10px rgba(0,0,0,0.7), 0 1px 0 rgba(255,255,255,0.05);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .p04f .hole span{
+    font-family:var(--serif); font-size:6.4cqw; letter-spacing:0.2em; color:#D9BE7B;
+    text-shadow:0 2px 8px rgba(0,0,0,0.9); transform:translateY(6%);
+  }
+  .p04f .brand{ text-align:center; font-family:var(--serif); font-size:8cqw; color:#EDE3CB; }
+  .p04f .foot{ text-align:center; color:#8A7F63; }
+  .p04b{ background:#0D0B10; color:#D8CFBB; }
+  .p04b .sheet{ flex:1; display:flex; flex-direction:column; justify-content:space-evenly; margin-top:4%; }
+  .p04b .row{ border-top:1px solid rgba(216,207,187,0.16); padding:3.4% 0; display:flex; gap:12px; align-items:baseline; }
+  .p04b .row .no{ font-family:var(--mono); font-size:8.5px; color:#B49B5E; letter-spacing:0.16em; }
+  .p04b .row div{ flex:1; }
+  .p04b .row h4{ font-family:var(--serif); font-weight:400; font-size:14.5px; color:#EDE3CB; margin-bottom:2px; }
+  .p04b .row p{ font-size:10.5px; line-height:1.5; color:#A99F88; }
+  .p04b .known{
+    align-self:center; margin:2% 0; width:52%; aspect-ratio:1; border-radius:50%; border:1px dashed rgba(217,190,123,0.5);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;
+  }
+  .p04b .known b{ font-family:var(--serif); font-weight:400; font-size:7cqw; letter-spacing:0.2em; color:#D9BE7B; }
+  .p04b .known small{ font-family:var(--mono); font-size:7.5px; letter-spacing:0.2em; color:#8A7F63; text-transform:uppercase; }
+
+  /* ————— P05 DECLASSIFIED ————— */
+  .p05f, .p05b{ background:linear-gradient(174deg,#26282E,#1B1D22); color:#C9C4B6; }
+  .p05 .dossier{ border:1px solid rgba(201,196,182,0.22); border-radius:10px; padding:7% 7.5%; flex:1; margin-top:5%; display:flex; flex-direction:column; gap:12px; font-family:var(--mono); font-size:10.5px; line-height:1.9; }
+  .p05 .case{ display:flex; justify-content:space-between; font-size:8.5px; letter-spacing:0.2em; text-transform:uppercase; color:#8D887A; }
+  .p05 .brand{ font-family:var(--serif); font-size:10cqw; color:#EDE6D6; }
+  .p05f .bar{ background:#0B0B0D; color:transparent; border-radius:2px; padding:1px 5px; box-shadow:0 0 0 0.5px rgba(255,255,255,0.06); user-select:none; }
+  .p05f .stmp{
+    align-self:flex-end; margin-top:auto; border:2.5px solid #A93443; color:#A93443; border-radius:6px;
+    font-family:"Archivo",sans-serif; font-weight:700; font-size:13px; letter-spacing:0.3em; text-transform:uppercase;
+    padding:7px 14px 6px; transform:rotate(-8deg); opacity:0.9;
+  }
+  .p05b .lift{ background:rgba(167,139,250,0.13); color:#E4D9BF; border-radius:2px; padding:1px 5px; }
+  .p05b .lift.gold{ color:#E9DFC8; }
+  .p05b .stmp{
+    align-self:flex-end; margin-top:auto; border:2.5px solid #8B72D9; color:#A78BFA; border-radius:6px;
+    font-family:"Archivo",sans-serif; font-weight:700; font-size:11px; letter-spacing:0.24em; text-transform:uppercase;
+    padding:7px 14px 6px; transform:rotate(-6deg); opacity:0.92;
+  }
+
+  /* ————— P06 BANKNOTE ————— */
+  .p06f{ background:linear-gradient(170deg,#EFEAF6,#E3DCEE); color:#3B2A6E; }
+  .p06f .bguil{ position:absolute; inset:0; z-index:1; opacity:0.55; }
+  .p06f .thread{
+    position:absolute; z-index:3; top:0; bottom:0; right:18%; width:7px;
+    background:repeating-linear-gradient(180deg, rgba(59,42,110,0.85) 0 14px, rgba(59,42,110,0.12) 14px 26px);
+  }
+  .p06f .bank{ font-family:"Archivo",sans-serif; font-weight:600; font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#5B4A8E; }
+  .p06f .denom{ font-family:var(--serif); font-size:26cqw; line-height:0.9; color:#3B2A6E; margin-top:4%; }
+  .p06f .unit{ font-family:var(--serif); font-style:italic; font-size:5.2cqw; color:#5B4A8E; }
+  .p06f .wm{ position:absolute; z-index:2; right:4%; bottom:14%; font-family:var(--deva); font-size:30cqw; color:rgba(59,42,110,0.10); line-height:1; }
+  .p06f .serial{ margin-top:auto; display:flex; justify-content:space-between; font-family:var(--mono); font-size:10px; letter-spacing:0.18em; color:#4A3A80; }
+  .p06f .micro{
+    margin-top:8px; font-family:var(--mono); font-size:4.6px; letter-spacing:0.06em; line-height:1.7;
+    color:rgba(59,42,110,0.75); border-top:1px solid rgba(59,42,110,0.4); padding-top:5px;
+    white-space:nowrap; overflow:hidden;
+  }
+  .p06b{ background:linear-gradient(170deg,#ECE6F4,#DFD7EA); color:#3B2A6E; }
+  .p06b .bh{ font-family:"Archivo",sans-serif; font-weight:600; font-size:10px; letter-spacing:0.26em; text-transform:uppercase; color:#4A3A80; margin-top:4%; }
+  .p06b .feat{ flex:1; display:flex; flex-direction:column; justify-content:space-evenly; }
+  .p06b .f{ display:grid; grid-template-columns:24px 1fr; gap:0 12px; align-items:start; border-top:1px solid rgba(59,42,110,0.2); padding:3% 0; }
+  .p06b .f .n{
+    width:20px; height:20px; border-radius:50%; border:1.5px solid #4A3A80; color:#4A3A80;
+    font-family:var(--mono); font-size:9.5px; display:flex; align-items:center; justify-content:center;
+  }
+  .p06b .f h4{ font-family:var(--serif); font-weight:400; font-size:14px; color:#31235E; margin-bottom:2px; }
+  .p06b .f p{ grid-column:2; font-size:10.5px; line-height:1.5; color:#584A85; }
+  .p06b .promise{ font-family:var(--serif); font-style:italic; font-size:4cqw; color:#4A3A80; margin-top:auto; border-top:1px solid rgba(59,42,110,0.3); padding-top:10px; }
+
+  /* ————— P07 THE INVITATION ————— */
+  .p07f, .p07b{ background:linear-gradient(176deg,#F6F1E4,#EFE9D8); color:#2E2A24; }
+  .p07 .bord{ position:absolute; inset:14px; border:1px solid rgba(46,42,36,0.3); z-index:1; }
+  .p07 .bord::after{ content:""; position:absolute; inset:4px; border:1px solid rgba(46,42,36,0.14); }
+  .p07f .inv{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:5.5%; padding:0 4%; }
+  .p07f .req{ font-family:var(--serif); font-style:italic; font-size:4cqw; color:#6A6152; }
+  .p07f .main{ font-family:var(--serif); font-size:7.8cqw; line-height:1.25; color:#26221B; max-width:16ch; }
+  .p07f .main i{ color:#6D28D9; }
+  .p07f .date{ font-size:9.5px; letter-spacing:0.3em; text-transform:uppercase; color:#6A6152; line-height:2.1; }
+  .p07f .seal{
+    width:44px; height:44px; border-radius:50%;
+    background:radial-gradient(circle at 34% 30%, #8B5CF6, #5B21B6 70%);
+    box-shadow:0 3px 8px rgba(46,42,36,0.35), inset 0 1px 3px rgba(255,255,255,0.4);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--deva); font-size:17px; color:#EDE6D6;
+  }
+  .p07b .ceremony{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:0; padding:0 5%; }
+  .p07b .oh{ text-align:center; font-size:9.5px; letter-spacing:0.34em; text-transform:uppercase; color:#6A6152; margin-bottom:6%; }
+  .p07b .act{ display:flex; align-items:baseline; gap:14px; border-top:1px solid rgba(46,42,36,0.18); padding:3.6% 0; }
+  .p07b .act .rn{ font-family:var(--serif); font-style:italic; font-size:13px; color:#6D28D9; width:24px; }
+  .p07b .act h4{ font-family:var(--serif); font-weight:400; font-size:15px; color:#26221B; }
+  .p07b .act p{ font-size:10.5px; color:#6A6152; margin-left:auto; text-align:right; max-width:18ch; line-height:1.5; }
+  .p07b .rsvp{ text-align:center; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:#6A6152; line-height:2; margin-top:4%; }
+
+  /* ————— P08 THE NEGATIVE ————— */
+  .p08f{ background:linear-gradient(174deg,#0B1524,#060D18); color:#9FD4E8; }
+  .p08f .filmedge{ font-family:var(--mono); font-size:8px; letter-spacing:0.3em; color:#4E7A92; display:flex; justify-content:space-between; text-transform:uppercase; }
+  .p08f .neg{ flex:1; display:flex; align-items:center; justify-content:center; }
+  .p08f .neg svg{ width:58%; }
+  .p08f .neg .ln{ fill:none; stroke:#BFE6F5; stroke-width:1.5; filter:drop-shadow(0 0 5px rgba(159,212,232,0.55)); }
+  .p08f .brand{ text-align:center; font-family:var(--serif); font-size:9cqw; color:#D8EEF8; }
+  .p08f .hook{ text-align:center; font-family:var(--mono); font-size:9.5px; letter-spacing:0.22em; text-transform:uppercase; color:#5E8CA6; margin-top:8px; }
+  .p08b{ background:linear-gradient(176deg,#F7F4EA,#EFEADB); color:#26241E; }
+  .p08b .devd{ flex:1; display:flex; align-items:center; justify-content:center; }
+  .p08b .devd svg{ width:58%; }
+  .p08b .devd .ln{ fill:none; stroke:#26241E; stroke-width:1.6; }
+  .p08b .caption{ font-family:"Cormorant Garamond",serif; font-style:italic; font-size:5cqw; color:#3A362C; text-align:center; }
+  .p08b .lab{
+    margin-top:5%; border:1px solid rgba(38,36,30,0.25); border-radius:8px; padding:10px 14px;
+    font-family:var(--mono); font-size:9px; letter-spacing:0.12em; color:#57523F; line-height:1.9; text-transform:uppercase;
   }
 </style>
 
-<section class="version cwall" id="wall">
+<section class="version atelier" id="atelier">
   <div class="vhead">
-    <span class="vno">The Exploration Wall</span>
-    <h2>Twenty further directions</h2>
-    <p>Front-card concepts, one aesthetic risk each — abstract, editorial, cinematic, cryptographic.
-    Several carry an intrigue mechanic: redactions that reveal on hover, a spotlight that roams until
-    you steer it, a polygraph that never stops writing. Any of these can be developed into a full
-    front + back rendition like V1–V6.</p>
+    <span class="vno">The Print Atelier</span>
+    <h2>Eight physical concepts</h2>
+    <p>Built for press, not pixels — every card is static ink on stock, and the intrigue comes
+    from the substrate itself: die-cuts, scratch latex, foil, spot-UV, letterpress, transparency.
+    Each concept is a complete front + back pair with a production note. The back always pays off
+    the front&rsquo;s riddle — and carries the product story.</p>
   </div>
-  <div class="cgrid">
 
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C01</span><h3>Specimen</h3></div>
-      <article class="cc c01" aria-label="Concept 1, Specimen">
-        <svg class="guill" viewBox="0 0 400 530" aria-hidden="true">
-          <g fill="none" stroke="rgba(109,40,217,0.16)" stroke-width="0.7">
-            <ellipse cx="200" cy="120" rx="190" ry="60"/><ellipse cx="200" cy="120" rx="170" ry="80"/>
-            <ellipse cx="200" cy="120" rx="150" ry="95" transform="rotate(14 200 120)"/>
-            <ellipse cx="200" cy="440" rx="190" ry="55"/><ellipse cx="200" cy="440" rx="165" ry="75" transform="rotate(-12 200 440)"/>
-          </g>
-        </svg>
-        <div class="stamp">SPECIMEN</div>
-        <div class="top"><span>Blostem</span><span>Type P — Person</span></div>
-        <div class="mid">
-          <span class="kind">Identity Instrument &middot; N&deg; 08</span>
-          <div class="brand">Jaano</div>
-          <div class="hook">The document is easy. The person is the point.</div>
-        </div>
-        <div class="mrz">P&lt;JAANO&lt;&lt;KNOWS&lt;&lt;ANYONE&lt;CAN&lt;VERIFY&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>GFF2026&lt;&lt;8BLOSTEM&lt;&lt;VCIP&lt;READY&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;08</div>
-      </article>
-      <p class="cidea">A passport specimen page — the universal artefact of “being known.” The MRZ line spells out the pitch.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C02</span><h3>Redacted</h3></div>
-      <article class="cc c02" aria-label="Concept 2, Redacted">
-        <div class="cls"><span>Eyes only</span><span>File N&deg; 08</span></div>
-        <div class="file">
-          <div class="brand">Jaano</div>
-          <p>Subject can present <span class="red">a perfect document</span>.<br>
-          Subject cannot fake <span class="red">being present</span>.<br>
-          Recommendation: <span class="red">stop verifying, start knowing</span>.</p>
-          <span class="card-hover-note">&#9654; Hover to declassify</span>
-        </div>
-        <div class="foot" style="color:#6E695E;">Blostem &middot; GFF 2026</div>
-      </article>
-      <p class="cidea">A dossier that declassifies under the reader’s cursor — the intrigue is doing the reveal yourself.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C03</span><h3>Polygraph</h3></div>
-      <article class="cc c03" aria-label="Concept 3, Polygraph">
-        <div class="top" style="color:#8A8378;"><span>Blostem</span><span>Ch. 08 — live</span></div>
-        <div class="chart">
-          <svg viewBox="0 0 400 190" aria-hidden="true">
-            <g class="gridl">
-              <line x1="0" y1="40" x2="400" y2="40"/><line x1="0" y1="95" x2="400" y2="95"/><line x1="0" y1="150" x2="400" y2="150"/>
+  <!-- P01 SPECIMEN -->
+  <div class="pset p01">
+    <div class="pmeta"><span class="cno">P01</span><h3>Specimen</h3></div>
+    <p class="pidea">A biometric passport spread. The data page answers its own fields with the pitch;
+    the visa page is stamped with the USPs — a passport that has already travelled through every claim.</p>
+    <p class="pspec"><b>Production</b> — intaglio guilloch&eacute; &middot; iridescent kinegram foil oval &middot; letterpress visa stamps &middot; 400gsm cotton</p>
+    <div class="stage">
+      <div class="slot">
+        <div class="slot-label">Front — data page</div>
+        <article class="card p01f" aria-label="P01 front">
+          <svg class="guil" viewBox="0 0 400 530" aria-hidden="true">
+            <g fill="none" stroke="rgba(109,40,217,0.14)" stroke-width="0.7">
+              <ellipse cx="200" cy="90" rx="210" ry="60"/><ellipse cx="200" cy="90" rx="180" ry="82" transform="rotate(11 200 90)"/>
+              <ellipse cx="200" cy="470" rx="210" ry="55"/><ellipse cx="200" cy="470" rx="175" ry="78" transform="rotate(-13 200 470)"/>
             </g>
-            <path class="wave" d="M0 95 L60 95 70 88 80 100 95 95 130 95 138 60 146 128 154 95 210 95 220 90 230 98 260 95 300 95 308 30 318 152 328 95 400 95"/>
+            <g fill="none" stroke="rgba(15,118,110,0.12)" stroke-width="0.7">
+              <ellipse cx="200" cy="90" rx="150" ry="95" transform="rotate(-16 200 90)"/>
+              <ellipse cx="200" cy="470" rx="145" ry="90" transform="rotate(17 200 470)"/>
+            </g>
           </svg>
-        </div>
-        <div class="brand">Jaano</div>
-        <div class="hook">Lies have a frequency.</div>
-        <div class="foot" style="color:#8A8378; margin-top:14px;">Every session, on the record</div>
-      </article>
-      <p class="cidea">A truth instrument that never stops writing — the needle spikes exactly where a story breaks.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C04</span><h3>Guilloch&eacute;</h3></div>
-      <article class="cc c04" aria-label="Concept 4, Guilloché">
-        <svg class="rosette" viewBox="0 0 200 200" aria-hidden="true">
-          <g fill="none" stroke="rgba(216,205,168,0.5)" stroke-width="0.5">
-            <circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="84"/><circle cx="100" cy="100" r="70"/>
-            <ellipse cx="100" cy="100" rx="96" ry="34"/><ellipse cx="100" cy="100" rx="96" ry="34" transform="rotate(45 100 100)"/>
-            <ellipse cx="100" cy="100" rx="96" ry="34" transform="rotate(90 100 100)"/><ellipse cx="100" cy="100" rx="96" ry="34" transform="rotate(135 100 100)"/>
-            <ellipse cx="100" cy="100" rx="72" ry="18" transform="rotate(22 100 100)"/><ellipse cx="100" cy="100" rx="72" ry="18" transform="rotate(67 100 100)"/>
-            <ellipse cx="100" cy="100" rx="72" ry="18" transform="rotate(112 100 100)"/><ellipse cx="100" cy="100" rx="72" ry="18" transform="rotate(157 100 100)"/>
-          </g>
-        </svg>
-        <div class="top" style="color:#A99E7C;"><span>Blostem</span><span>Series 2026</span></div>
-        <div class="mid">
+          <div class="hdr"><span>Blostem &middot; Identity Instrument</span><span>Type P &mdash; Person</span></div>
+          <div class="body">
+            <div class="photo"><span class="dv">जानो</span><span class="cap">Holder&rsquo;s likeness</span></div>
+            <div class="fields">
+              <div class="fld"><label>Surname</label><div>KNOWN</div></div>
+              <div class="fld"><label>Given name</label><div>CUSTOMER</div></div>
+              <div class="fld"><label>Status</label><div>Verified on video</div></div>
+              <div class="fld"><label>Date of issue</label><div>GFF &middot; MMXXVI</div></div>
+              <div class="fld"><label>Issuing authority</label><div>Jaano, by Blostem</div></div>
+            </div>
+          </div>
+          <div class="kine" aria-hidden="true"></div>
           <div class="brand">Jaano</div>
-          <div class="hook">As hard to fake as money should be.</div>
-        </div>
-        <div class="foot" style="color:#A99E7C; display:flex; justify-content:space-between;"><span>N&deg; 08</span><span class="denom" style="font-size:16px;">&#10687;</span></div>
-      </article>
-      <p class="cidea">Banknote engraving — machine-turned lattice that forgers hate, applied to the currency of trust.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C05</span><h3>Obscura</h3></div>
-      <article class="cc c05" aria-label="Concept 5, Obscura">
-        <div class="veil" aria-hidden="true"></div>
-        <div class="top" style="color:#6B6559;"><span>Blostem</span><span>N&deg; 08</span></div>
-        <div class="mid">
-          <div class="brand">Jaano</div>
-          <div class="hook">Who&rsquo;s really on the other side of the call?</div>
-        </div>
-        <div class="foot">Move the light. Find out.</div>
-      </article>
-      <p class="cidea">A card in darkness, read through a roaming spotlight — steer it with your cursor. Verification as illumination.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C06</span><h3>Backscatter</h3></div>
-      <article class="cc c06" aria-label="Concept 6, Backscatter">
-        <div class="top" style="color:#7FA8CC;"><span>Blostem</span><span>Scan 08</span></div>
-        <svg class="scan" viewBox="0 0 200 240" aria-hidden="true">
-          <g class="sil">
-            <circle cx="100" cy="70" r="34"/>
-            <path d="M40 210 C40 150 70 130 100 130 C130 130 160 150 160 210"/>
-            <path d="M84 62 q16 -14 32 0" opacity="0.6"/>
-          </g>
-        </svg>
-        <div class="scanline" aria-hidden="true"></div>
-        <div class="brand" style="margin-top:auto;">JAANO</div>
-        <div class="hook">See who&rsquo;s really there.</div>
-      </article>
-      <p class="cidea">An airport backscatter for identity — the sweep line suggests liveness and deepfake defense without saying either word.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C07</span><h3>The Interview</h3></div>
-      <article class="cc c07" aria-label="Concept 7, The Interview">
-        <div class="top" style="color:#8F887A;"><span>Blostem</span><span>Scene 08</span></div>
-        <div class="script">
-          <div class="slug">INT. VIDEO CALL &mdash; 11:42 AM</div>
-          <div class="action">The officer leans in. Every word,<br>every frame &mdash; recorded.</div>
-          <div class="char">OFFICER</div>
-          <div class="dlg">Tell me about the loan.</div>
-          <div class="slug">[ THE DISCUSSION IS NOW EVIDENCE ]</div>
-        </div>
-        <div class="brand">Jaano</div>
-      </article>
-      <p class="cidea">The personal discussion as a screenplay — because with Jaano, the interview finally has a script that survives.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C08</span><h3>Chiaroscuro</h3></div>
-      <article class="cc c08" aria-label="Concept 8, Chiaroscuro">
-        <div class="top" style="color:#8F7E5F;"><span>Blostem</span><span>N&deg; 08</span></div>
-        <div class="mid">
-          <div class="brand">Jaano</div>
-          <div class="hook">The truth shows up in good light.</div>
-        </div>
-        <div class="foot" style="color:#8F7E5F;">Video KYC &middot; Video PD &middot; On the record</div>
-      </article>
-      <p class="cidea">Baroque single-source light on near-black — old-master gravitas for a platform whose job is illumination.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C09</span><h3>Helvetic</h3></div>
-      <article class="cc c09" aria-label="Concept 9, Helvetic">
-        <div class="top" style="color:#777;"><span>Blostem</span><span>N&deg; 08</span></div>
-        <div class="rule" aria-hidden="true"></div>
-        <div class="big">Know<br>your<br>customer<em>.</em></div>
-        <div class="sub">Not a checkbox. A verb. Jaano — video KYC, video PD and guided journeys that end in evidence.</div>
-        <div class="foot">Jaano &middot; blostem.com</div>
-      </article>
-      <p class="cidea">International-style typography plays the regulator’s own phrase back as a promise. One red full stop.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C10</span><h3>Bauhaus</h3></div>
-      <article class="cc c10" aria-label="Concept 10, Bauhaus">
-        <svg class="geo" viewBox="0 0 200 264" aria-hidden="true">
-          <circle cx="146" cy="70" r="44" fill="#1F3A93" opacity="0.9"/>
-          <circle cx="146" cy="70" r="18" fill="#EFE7D8"/>
-          <circle cx="146" cy="70" r="8" fill="#20242C"/>
-          <rect x="24" y="118" width="88" height="10" fill="#C33C2E"/>
-          <path d="M24 64 L92 26 L92 102 Z" fill="#D9A62E" opacity="0.92"/>
-          <line x1="24" y1="150" x2="176" y2="150" stroke="#20242C" stroke-width="2"/>
-        </svg>
-        <div class="mid">
-          <div class="brand">JAANO</div>
-          <div class="hook">Form follows trust. An eye, a signal, a record — assembled.</div>
-        </div>
-        <div class="foot" style="color:#8A857B;">Blostem &middot; GFF 2026</div>
-      </article>
-      <p class="cidea">Geometry as identity: the circle is an eye, the triangle a signal, the bar a ledger line. Abstract but legible.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C11</span><h3>Iris</h3></div>
-      <article class="cc c11" aria-label="Concept 11, Iris">
-        <div class="iris" aria-hidden="true"></div>
-        <div class="pupil" aria-hidden="true"></div>
-        <div class="top" style="color:#8B879C;"><span>Blostem</span><span>N&deg; 08</span></div>
-        <div class="brand" style="margin-top:auto;">Jaano</div>
-        <div class="hook">The eye that knows.</div>
-      </article>
-      <p class="cidea">Op-art moiré rings breathe like an iris; the violet pupil fixes on the viewer. Pure abstraction, instantly ocular.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C12</span><h3>Contour</h3></div>
-      <article class="cc c12" aria-label="Concept 12, Contour">
-        <svg class="topo" viewBox="0 0 220 290" aria-hidden="true">
-          <path d="M30 240 C10 190 40 150 80 145 C130 140 150 100 140 60 C132 30 90 20 60 40"/>
-          <path d="M45 245 C25 200 52 162 88 158 C142 152 162 105 152 62 C144 30 100 12 68 30"/>
-          <path class="hot" d="M60 250 C42 210 66 174 96 170 C154 163 174 110 164 64 C156 28 110 4 76 22"/>
-          <path d="M75 255 C58 220 80 186 104 182 C166 174 186 115 176 66"/>
-          <path d="M90 260 C74 230 94 198 112 194 C178 184 198 120 188 68"/>
-        </svg>
-        <div class="top" style="color:#7E9C8B;"><span>Blostem</span><span>N&deg; 08</span></div>
-        <div class="brand" style="margin-top:auto;">Jaano</div>
-        <div class="hook">No two journeys alike. Every one mapped.</div>
-      </article>
-      <p class="cidea">Contour lines read as terrain and fingerprint at once — configurability drawn as cartography.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C13</span><h3>Constellation</h3></div>
-      <article class="cc c13" aria-label="Concept 13, Constellation">
-        <svg class="sky" viewBox="0 0 200 264" aria-hidden="true">
-          <line x1="40" y1="60" x2="92" y2="88"/><line x1="92" y1="88" x2="140" y2="52"/>
-          <line x1="92" y1="88" x2="110" y2="140"/><line x1="110" y1="140" x2="160" y2="170"/>
-          <line x1="110" y1="140" x2="66" y2="168"/>
-          <circle cx="40" cy="60" r="2"/><circle cx="140" cy="52" r="2"/><circle cx="66" cy="168" r="2"/>
-          <circle cx="160" cy="170" r="2"/><circle cx="92" cy="88" r="2.6" class="br"/><circle cx="110" cy="140" r="2.6" class="br"/>
-          <circle cx="30" cy="200" r="1.2"/><circle cx="176" cy="96" r="1.2"/><circle cx="150" cy="230" r="1.2"/><circle cx="58" cy="30" r="1.2"/>
-        </svg>
-        <div class="top" style="color:#8791B8;"><span>Blostem</span><span>N&deg; 08</span></div>
-        <div class="brand" style="margin-top:auto;">Jaano</div>
-        <div class="hook">Every identity leaves a pattern.</div>
-      </article>
-      <p class="cidea">Signals joined into a constellation — scattered data points that only make a shape when you know how to look.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C14</span><h3>Mercury</h3></div>
-      <article class="cc c14" aria-label="Concept 14, Mercury">
-        <div class="blob" aria-hidden="true"></div>
-        <div class="top" style="color:#9AA0AB;"><span>Blostem</span><span>N&deg; 08</span></div>
-        <div class="brand" style="margin-top:auto;">JAANO</div>
-        <div class="hook">Fluid journeys. Solid proof.</div>
-      </article>
-      <p class="cidea">Liquid chrome — a molten form that never repeats, rendered in mirror-metal. Y2K-luxe abstraction.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C15</span><h3>Blueprint</h3></div>
-      <article class="cc c15" aria-label="Concept 15, Blueprint">
-        <div class="top" style="color:#9DBAD6;"><span>Blostem Works</span><span>Dwg. 08 rev. C</span></div>
-        <div class="draw">
-          <svg viewBox="0 0 400 220" aria-hidden="true">
-            <g class="ln">
-              <rect x="60" y="40" width="170" height="120" rx="8"/>
-              <circle cx="145" cy="88" r="22"/>
-              <path d="M118 140 c8 -18 46 -18 54 0"/>
-              <path d="M230 100 L300 100 L300 60 L340 80 L300 100 L300 140 L340 120"/>
+          <div class="mrz">P&lt;JAANO&lt;&lt;KNOWS&lt;&lt;ANYONE&lt;CAN&lt;VERIFY&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>GFF2026&lt;&lt;8BLOSTEM&lt;&lt;VCIP&lt;READY&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;08</div>
+        </article>
+      </div>
+      <div class="slot">
+        <div class="slot-label">Back — visa page</div>
+        <article class="card p01b" aria-label="P01 back">
+          <svg class="guil" viewBox="0 0 400 530" aria-hidden="true">
+            <g fill="none" stroke="rgba(109,40,217,0.1)" stroke-width="0.7">
+              <ellipse cx="200" cy="265" rx="230" ry="150"/><ellipse cx="200" cy="265" rx="200" ry="170" transform="rotate(24 200 265)"/>
+              <ellipse cx="200" cy="265" rx="180" ry="185" transform="rotate(-28 200 265)"/>
             </g>
-            <g class="dim">
-              <line x1="60" y1="180" x2="230" y2="180"/><line x1="60" y1="174" x2="60" y2="186"/><line x1="230" y1="174" x2="230" y2="186"/>
-            </g>
-            <text x="120" y="192">ONE CALL — TWO JOBS</text>
-            <text x="250" y="52">EVIDENCE OUT</text>
           </svg>
-        </div>
-        <div class="brand">JAANO</div>
-        <div class="hook">The machinery of knowing.</div>
-      </article>
-      <p class="cidea">A technical drawing of the trust machine — dimensioned, revisioned, engineered. Speaks to builders.</p>
+          <div class="hdr"><span>Entries &middot; Endorsements</span><span>Page 08</span></div>
+          <div class="obs">Observations: instrument is configured to the bearer&rsquo;s own process. White-label by design.</div>
+          <div class="stamps">
+            <div class="st st1"><span class="big">KYC + PD &middot; One Call</span><span class="sm">Cleared &mdash; most brands can&rsquo;t</span></div>
+            <div class="st st2"><span class="big">Self-Verified</span><span class="sm">Solo &middot; minutes</span></div>
+            <div class="st st3"><span class="big">AI Avatar Guided</span><span class="sm">Any language &middot; every step</span></div>
+            <div class="st st4"><span class="big">Record Sealed</span><span class="sm">Hash-chained &middot; geo-verified</span></div>
+            <div class="st st5"><span class="big">RBI V-CIP Ready</span><span class="sm">Officer-led &middot; live</span></div>
+          </div>
+          <div class="mrz">RENEWALS&lt;UNLIMITED&lt;&lt;PARTNERSHIP@BLOSTEM.COM&lt;&lt;&lt;&lt;</div>
+        </article>
+      </div>
     </div>
+  </div>
 
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C16</span><h3>The Pause</h3></div>
-      <article class="cc c16" aria-label="Concept 16, The Pause">
-        <div class="top"><span>Blostem</span><span>N&deg; 08</span></div>
-        <div class="mid">
-          <div class="line1">Most verification is theatre.</div>
-          <div class="line2">Jaano is evidence</div>
-        </div>
-        <div class="foot">blostem.com</div>
-      </article>
-      <p class="cidea">One sentence in an empty room. The quietest card in the hall — which is exactly why it gets read.</p>
+  <!-- P02 THE SCRATCH -->
+  <div class="pset p02">
+    <div class="pmeta"><span class="cno">P02</span><h3>The Scratch</h3></div>
+    <p class="pidea">A real scratch-off card. The front hides the claim under silver latex — half-scratched,
+    it shows just enough to force the itch. The back is the full manifest, each entry framed as a reveal.</p>
+    <p class="pspec"><b>Production</b> — silver scratch latex panel &middot; soft-touch charcoal stock &middot; violet foil type &middot; include a coin?</p>
+    <div class="stage">
+      <div class="slot">
+        <div class="slot-label">Front</div>
+        <article class="card p02f" aria-label="P02 front">
+          <div class="card-top"><span class="wordmark" style="color:#B9A8F5;">blostem</span><span class="plaque" style="color:#8F8A7D; border-color:rgba(232,226,212,0.2);">N&deg; 08</span></div>
+          <div class="say">Everyone says they verify. <i>Scratch to see what they can&rsquo;t do.</i></div>
+          <div class="panelwrap">
+            <div class="panel">
+              <div class="under">&hellip;merge KYC and the credit discussion into <b>&nbsp;one call.</b></div>
+              <div class="latex"><span>Scratch here</span></div>
+            </div>
+          </div>
+          <div class="cue">Jaano &middot; scratch. know.</div>
+        </article>
+      </div>
+      <div class="slot">
+        <div class="slot-label">Back — the manifest</div>
+        <article class="card p02b" aria-label="P02 back">
+          <div class="card-top"><span class="wordmark" style="color:#B9A8F5;">blostem</span><span class="plaque" style="color:#8F8A7D; border-color:rgba(232,226,212,0.2);">N&deg; 08</span></div>
+          <div class="bh">What the others <i>can&rsquo;t.</i></div>
+          <div class="mani">
+            <div class="strip"><label>Reveal 01</label><div class="rv">KYC + the credit discussion, <b>one call</b> — no second appointment.<span class="fleck" aria-hidden="true"></span></div></div>
+            <div class="strip"><label>Reveal 02</label><div class="rv">An <b>AI avatar</b> that guides customers step by step, in any language.<span class="fleck" aria-hidden="true"></span></div></div>
+            <div class="strip"><label>Reveal 03</label><div class="rv">Officer-led, self-serve or avatar — <b>three modes</b>, one evidence trail.<span class="fleck" aria-hidden="true"></span></div></div>
+            <div class="strip"><label>Reveal 04</label><div class="rv">Every second recorded, <b>hash-chained</b>, geo-verified in India.<span class="fleck" aria-hidden="true"></span></div></div>
+            <div class="strip"><label>Reveal 05</label><div class="rv">Configured to <b>your process</b> — white-label by design.<span class="fleck" aria-hidden="true"></span></div></div>
+          </div>
+          <div class="cue" style="font-family:var(--mono); font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:#8F8A7D; margin-top:4%;">blostem.com &middot; partnership@blostem.com</div>
+        </article>
+      </div>
     </div>
+  </div>
 
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C17</span><h3>Checksum</h3></div>
-      <article class="cc c17" aria-label="Concept 17, Checksum">
-        <div class="rain" aria-hidden="true">
-          8f2a c1d9 44e0 b7a3 90fc 5d21 ee83 07b4 6a5f d2c8 31b9 f04e 7c6d a8e2 19f5 03bd
-          e6a1 4c72 <b>jaano&nbsp;=&nbsp;sha256(every&nbsp;second)</b> 8d30 b5f7 261c 9ae4 70d5 fb18 42c6 e793
-          05af c8d1 3e62 97b0 f4a5 1d8e 6b23 a0f9 5748 cd16 82e3 b94a 0f67 d51c 38ea 7b02
-          94d6 e1f8 4a30 c7b5 268d 5f91 a3e7 0c44 b8f2 63d0 17ac e95b 40f6 8b21 d7c3 52e9
-        </div>
-        <div class="top" style="color:#7C8A7C;"><span>Blostem</span><span>Block 08</span></div>
-        <div class="brand" style="margin-top:auto;">Jaano</div>
-        <div class="hook">Trust, chained. Tamper and the math tells.</div>
-      </article>
-      <p class="cidea">The hash-chained audit trail made visible — one legible line of meaning inside the noise.</p>
+  <!-- P03 GROUND GLASS -->
+  <div class="pset p03">
+    <div class="pmeta"><span class="cno">P03</span><h3>Ground Glass</h3></div>
+    <p class="pidea">The front is out of focus — warm shapes behind frosted laminate that could be anyone.
+    The back resolves the same scene into a verified person with the signals called out. Flip = focus.</p>
+    <p class="pspec"><b>Production</b> — soft-touch matte laminate front &middot; gloss varnish back &middot; duplex 700gsm</p>
+    <div class="stage">
+      <div class="slot">
+        <div class="slot-label">Front — out of focus</div>
+        <article class="card p03f" aria-label="P03 front">
+          <div class="blur" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <div class="pane" aria-hidden="true"></div>
+          <div class="card-top" style="z-index:3;"><span class="wordmark" style="color:#DFE2E8;">blostem</span><span class="plaque" style="color:#B9BEC9; border-color:rgba(233,235,239,0.3);">N&deg; 08</span></div>
+          <div class="plate">
+            <div class="brand">Jaano</div>
+            <div class="hook">Until you know, everyone is a blur.</div>
+          </div>
+        </article>
+      </div>
+      <div class="slot">
+        <div class="slot-label">Back — in focus</div>
+        <article class="card p03b" aria-label="P03 back">
+          <div class="card-top"><span class="wordmark" style="color:#4C1D95;">blostem</span><span class="plaque" style="color:#4C5160; border-color:rgba(25,28,34,0.25);">N&deg; 08</span></div>
+          <div class="focus">
+            <svg viewBox="0 0 200 240" aria-hidden="true">
+              <g class="ln">
+                <circle cx="100" cy="74" r="36"/>
+                <path d="M38 218 C38 158 68 138 100 138 C132 138 162 158 162 218"/>
+                <path d="M86 66 q14 -12 28 0" opacity="0.55"/>
+                <path d="M84 84 q16 12 32 0" opacity="0.55"/>
+              </g>
+              <g class="ln" opacity="0.9">
+                <path d="M148 40 l10 10 18 -20" stroke-width="2"/>
+              </g>
+            </svg>
+            <span class="callout co1">Face match &check;</span>
+            <span class="callout co2">Liveness &check;</span>
+            <span class="callout co3">Geo &middot; India &check;</span>
+          </div>
+          <div class="bh">Jaano brings the person <i>into focus.</i></div>
+          <p class="bsub">Officer-led, self-serve or AI-avatar-guided — every journey ends in a sealed, replayable record.</p>
+        </article>
+      </div>
     </div>
+  </div>
 
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C18</span><h3>Contact Sheet</h3></div>
-      <article class="cc c18" aria-label="Concept 18, Contact Sheet">
-        <div class="top" style="color:#8F887B;"><span>Blostem</span><span>Roll 08</span></div>
-        <div class="strip">
-          <div class="sprock" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          <div class="frame"><span>Frame 01</span><i>Consent</i></div>
-          <div class="frame"><span>Frame 02</span><i>Documents</i></div>
-          <div class="frame"><span>Frame 03</span><i>The discussion</i></div>
-          <div class="frame"><span>Frame 04</span><i>Liveness</i></div>
-          <div class="sprock" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-        </div>
-        <div class="brand">Jaano</div>
-        <div class="hook">Every frame is evidence.</div>
-      </article>
-      <p class="cidea">A photographer’s contact sheet of the journey — “on the record” shown as literal film.</p>
-    </div>
-
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C19</span><h3>The Club</h3></div>
-      <article class="cc c19" aria-label="Concept 19, The Club">
-        <div class="top" style="color:#B99F78;"><span>Blostem</span><span>N&deg; 08</span></div>
-        <div class="brass">
-          <div class="small">By introduction only</div>
+  <!-- P04 APERTURE -->
+  <div class="pset p04">
+    <div class="pmeta"><span class="cno">P04</span><h3>Aperture</h3></div>
+    <p class="pidea">A laser die-cut circle punches clean through the card. Held up, the world shows through it;
+    laid on the back&rsquo;s evidence sheet, the hole frames one gold word. The object itself argues: look closer.</p>
+    <p class="pspec"><b>Production</b> — laser die-cut &oslash;38mm &middot; gold foil &middot; triplex black stock, gilded edges</p>
+    <div class="stage">
+      <div class="slot">
+        <div class="slot-label">Front — die-cut</div>
+        <article class="card p04f" aria-label="P04 front">
+          <div class="card-top"><span class="wordmark" style="color:#C9B685;">blostem</span><span class="plaque" style="color:#8A7F63; border-color:rgba(216,207,187,0.25);">N&deg; 08</span></div>
+          <div class="ringzone">
+            <svg class="ringsvg" viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="ringpath" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+              <text><textPath href="#ringpath">Look closer &middot; Jaano &middot; look closer &middot; Jaano &middot; look closer &middot; Jaano &middot;</textPath></text>
+            </svg>
+            <div class="hole"><span>KNOWN</span></div>
+          </div>
           <div class="brand">Jaano</div>
-          <div class="hook">Your customers — known by name, not just number.</div>
-          <div class="small">You are invited to know</div>
-        </div>
-      </article>
-      <p class="cidea">Oxblood leather and brass — membership-club codes recast: onboarding as induction, not processing.</p>
+          <div class="foot" style="text-align:center;">The hole is real. So is the proof.</div>
+        </article>
+      </div>
+      <div class="slot">
+        <div class="slot-label">Back — evidence sheet</div>
+        <article class="card p04b" aria-label="P04 back">
+          <div class="card-top"><span class="wordmark" style="color:#C9B685;">blostem</span><span class="plaque" style="color:#8A7F63; border-color:rgba(216,207,187,0.25);">N&deg; 08</span></div>
+          <div class="known"><b>KNOWN</b><small>What the aperture frames</small></div>
+          <div class="sheet">
+            <div class="row"><span class="no">01</span><div><h4>One call, two jobs</h4><p>Video KYC + the credit discussion, merged. Most brands can&rsquo;t.</p></div></div>
+            <div class="row"><span class="no">02</span><div><h4>Three ways to verify</h4><p>Officer-led V-CIP, self-serve, or AI-avatar-guided — multilingual.</p></div></div>
+            <div class="row"><span class="no">03</span><div><h4>Sealed record</h4><p>Hash-chained, geo-verified, replayable for any regulator.</p></div></div>
+            <div class="row"><span class="no">04</span><div><h4>Your process, not ours</h4><p>Configured per organisation. White-label by design.</p></div></div>
+          </div>
+        </article>
+      </div>
     </div>
+  </div>
 
-    <div class="cslot">
-      <div class="cmeta"><span class="cno">C20</span><h3>Sonar</h3></div>
-      <article class="cc c20" aria-label="Concept 20, Sonar">
-        <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
-        <div class="dot" aria-hidden="true"></div>
-        <div class="top" style="color:#7FA79F;"><span>Blostem</span><span>Ping 08</span></div>
-        <div class="brand" style="margin-top:auto;">Jaano</div>
-        <div class="hook">Truth has a signature.</div>
-      </article>
-      <p class="cidea">A single voice pings outward and what returns is a signature — verification as echolocation.</p>
+  <!-- P05 DECLASSIFIED -->
+  <div class="pset p05">
+    <div class="pmeta"><span class="cno">P05</span><h3>Declassified</h3></div>
+    <p class="pidea">The front is a censored case file — the redaction bars printed in high-gloss spot-UV so they
+    catch the light like wet ink. The flip declassifies it: same page, bars lifted, claims in violet. </p>
+    <p class="pspec"><b>Production</b> — spot-UV redaction bars &middot; matte slate stock &middot; red + violet stamp inks</p>
+    <div class="stage">
+      <div class="slot">
+        <div class="slot-label">Front — classified</div>
+        <article class="card p05f" aria-label="P05 front">
+          <div class="case"><span>Case 08 &middot; Blostem</span><span>Subject: your customer</span></div>
+          <div class="dossier">
+            <div class="brand">Jaano</div>
+            <p>Finding 1: subject completed <span class="bar">KYC and the credit interview</span> in <span class="bar">a single call</span>.<br>
+            Finding 2: journey was guided by <span class="bar">an AI avatar, in the subject&rsquo;s language</span>.<br>
+            Finding 3: the full session is <span class="bar">hash-chained and replayable</span>.<br>
+            Method: <span class="bar">configured to the institution&rsquo;s own process</span>.</p>
+            <div class="stmp">Classified</div>
+          </div>
+        </article>
+      </div>
+      <div class="slot">
+        <div class="slot-label">Back — declassified</div>
+        <article class="card p05b" aria-label="P05 back">
+          <div class="case"><span>Case 08 &middot; Blostem</span><span>Cleared for release</span></div>
+          <div class="dossier">
+            <div class="brand">Jaano</div>
+            <p>Finding 1: subject completed <span class="lift">KYC and the credit interview</span> in <span class="lift gold">a single call</span>.<br>
+            Finding 2: journey was guided by <span class="lift">an AI avatar, in the subject&rsquo;s language</span>.<br>
+            Finding 3: the full session is <span class="lift">hash-chained and replayable</span>.<br>
+            Method: <span class="lift">configured to the institution&rsquo;s own process</span>.</p>
+            <div class="stmp">Declassified &middot; by Jaano</div>
+          </div>
+        </article>
+      </div>
     </div>
+  </div>
 
+  <!-- P06 BANKNOTE -->
+  <div class="pset p06">
+    <div class="pmeta"><span class="cno">P06</span><h3>Tender</h3></div>
+    <p class="pidea">A vertical banknote — denomination 08, जानो in the watermark, a metallic security thread,
+    and a genuine microprint line that needs a loupe. The reverse lists its &ldquo;security features&rdquo;:
+    the five USPs, in a central bank&rsquo;s own vocabulary.</p>
+    <p class="pspec"><b>Production</b> — intaglio print &middot; embedded foil thread &middot; true 0.6pt microtext &middot; cotton-linen note paper</p>
+    <div class="stage">
+      <div class="slot">
+        <div class="slot-label">Front — obverse</div>
+        <article class="card p06f" aria-label="P06 front">
+          <svg class="bguil" viewBox="0 0 400 530" aria-hidden="true">
+            <g fill="none" stroke="rgba(59,42,110,0.2)" stroke-width="0.6">
+              <ellipse cx="80" cy="440" rx="150" ry="60" transform="rotate(-24 80 440)"/>
+              <ellipse cx="80" cy="440" rx="130" ry="75" transform="rotate(12 80 440)"/>
+              <ellipse cx="80" cy="440" rx="110" ry="88" transform="rotate(48 80 440)"/>
+              <ellipse cx="330" cy="80" rx="140" ry="55" transform="rotate(18 330 80)"/>
+              <ellipse cx="330" cy="80" rx="120" ry="70" transform="rotate(-22 330 80)"/>
+            </g>
+          </svg>
+          <div class="thread" aria-hidden="true"></div>
+          <div class="bank">Reserve of Knowing &middot; Blostem</div>
+          <div class="denom">08</div>
+          <div class="unit">eight seconds to trust</div>
+          <div class="wm" aria-hidden="true">जानो</div>
+          <div class="serial"><span>JN 2026 0808</span><span>Series GFF</span></div>
+          <div class="micro">JAANO&middot;MERGES&middot;KYC&middot;AND&middot;PD&middot;IN&middot;ONE&middot;CALL&middot;THREE&middot;MODES&middot;OFFICER&middot;SELF&middot;AI&middot;AVATAR&middot;EVERY&middot;SECOND&middot;HASH&middot;CHAINED&middot;CONFIGURED&middot;TO&middot;YOUR&middot;PROCESS&middot;JAANO&middot;KNOWS&middot;</div>
+        </article>
+      </div>
+      <div class="slot">
+        <div class="slot-label">Back — security features</div>
+        <article class="card p06b" aria-label="P06 back">
+          <div class="card-top"><span class="wordmark" style="color:#4A3A80;">blostem</span><span class="plaque" style="color:#584A85; border-color:rgba(59,42,110,0.3);">N&deg; 08</span></div>
+          <div class="bh">Security features of this instrument</div>
+          <div class="feat">
+            <div class="f"><span class="n">1</span><div><h4>Single-call fusion</h4><p>KYC + credit discussion merged. Counterfeit-proof: most brands can&rsquo;t.</p></div></div>
+            <div class="f"><span class="n">2</span><div><h4>Triple issue</h4><p>Officer-led V-CIP, self-serve, AI-avatar-guided — all multilingual.</p></div></div>
+            <div class="f"><span class="n">3</span><div><h4>Chained watermark</h4><p>Every second recorded, hash-chained, geo-verified in India.</p></div></div>
+            <div class="f"><span class="n">4</span><div><h4>Bespoke plate</h4><p>Struck to your process — journeys, checklists, branding. White-label.</p></div></div>
+          </div>
+          <div class="promise">The bearer is entitled to know their customer on demand. &mdash; Jaano</div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- P07 THE INVITATION -->
+  <div class="pset p07">
+    <div class="pmeta"><span class="cno">P07</span><h3>The Invitation</h3></div>
+    <p class="pidea">Wedding-grade stationery for an unexpected subject. The front invites you to
+    &ldquo;the knowing of your customer&rdquo;; the back is the order of ceremony — the onboarding
+    journey recast as rite. RSVP goes to partnerships.</p>
+    <p class="pspec"><b>Production</b> — letterpress on 600gsm cotton &middot; blind-embossed border &middot; violet edge paint &middot; wax seal</p>
+    <div class="stage">
+      <div class="slot">
+        <div class="slot-label">Front</div>
+        <article class="card p07f" aria-label="P07 front">
+          <div class="bord" aria-hidden="true"></div>
+          <div class="inv">
+            <div class="req">Blostem requests the pleasure of your company at</div>
+            <div class="main">the knowing of <i>your customer</i></div>
+            <div class="date">Global Fintech Fest &middot; Mumbai<br>MMXXVI &middot; Stand of Blostem</div>
+            <div class="seal">जा</div>
+            <div class="req" style="font-size:3.4cqw;">Jaano &mdash; verb, Hindi. &ldquo;to know.&rdquo;</div>
+          </div>
+        </article>
+      </div>
+      <div class="slot">
+        <div class="slot-label">Back — order of ceremony</div>
+        <article class="card p07b" aria-label="P07 back">
+          <div class="bord" aria-hidden="true"></div>
+          <div class="ceremony">
+            <div class="oh">Order of ceremony</div>
+            <div class="act"><span class="rn">I.</span><h4>The Consent</h4><p>on the record, from the first second</p></div>
+            <div class="act"><span class="rn">II.</span><h4>The Documents</h4><p>captured, matched, sealed</p></div>
+            <div class="act"><span class="rn">III.</span><h4>The Discussion</h4><p>KYC + PD, one call &mdash; most brands can&rsquo;t</p></div>
+            <div class="act"><span class="rn">IV.</span><h4>The Guides</h4><p>officer, self, or AI avatar &mdash; any language</p></div>
+            <div class="act"><span class="rn">V.</span><h4>The Knowing</h4><p>a hash-chained record, yours forever</p></div>
+            <div class="rsvp">RSVP &middot; partnership@blostem.com<br>blostem.com &middot; +91&#8209;7428478926</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- P08 THE NEGATIVE -->
+  <div class="pset p08">
+    <div class="pmeta"><span class="cno">P08</span><h3>The Negative</h3></div>
+    <p class="pidea">The front is printed on translucent film — an undeveloped negative, cold and reversed,
+    that only resolves when held to the light. The back is the developed print on warm paper: same person,
+    now verified. Development = verification.</p>
+    <p class="pspec"><b>Production</b> — front printed on frosted acetate &middot; back on warm cotton print stock &middot; sold as a two-layer card</p>
+    <div class="stage">
+      <div class="slot">
+        <div class="slot-label">Front — the negative (film)</div>
+        <article class="card p08f" aria-label="P08 front">
+          <div class="filmedge"><span>&#9664;&#9664; Jaano safety film</span><span>Frame 08 &#9654;&#9654;</span></div>
+          <div class="neg">
+            <svg viewBox="0 0 200 240" aria-hidden="true">
+              <g class="ln">
+                <circle cx="100" cy="74" r="36"/>
+                <path d="M38 218 C38 158 68 138 100 138 C132 138 162 158 162 218"/>
+              </g>
+            </svg>
+          </div>
+          <div class="brand">Jaano</div>
+          <div class="hook">Hold to the light.</div>
+          <div class="filmedge" style="margin-top:10px;"><span>Evidence stock</span><span>ISO &infin;</span></div>
+        </article>
+      </div>
+      <div class="slot">
+        <div class="slot-label">Back — the developed print</div>
+        <article class="card p08b" aria-label="P08 back">
+          <div class="card-top"><span class="wordmark" style="color:#4C1D95;">blostem</span><span class="plaque" style="color:#57523F; border-color:rgba(38,36,30,0.25);">N&deg; 08</span></div>
+          <div class="devd">
+            <svg viewBox="0 0 200 240" aria-hidden="true">
+              <g class="ln">
+                <circle cx="100" cy="74" r="36"/>
+                <path d="M38 218 C38 158 68 138 100 138 C132 138 162 158 162 218"/>
+                <path d="M86 66 q14 -12 28 0" opacity="0.5"/>
+                <path d="M84 84 q16 12 32 0" opacity="0.5"/>
+                <path d="M146 44 l9 9 16 -18" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="caption">Developed at GFF, MMXXVI &mdash; every second on the record.</div>
+          <div class="lab">Lab: Jaano by Blostem &middot; Process: V-CIP / Self / AI-Avatar<br>Fixative: hash-chain &middot; Paper: your brand, not ours</div>
+        </article>
+      </div>
+    </div>
   </div>
 </section>
+
 
   <section class="notes">
     <div class="note">
