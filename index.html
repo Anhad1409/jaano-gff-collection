@@ -201,6 +201,41 @@
   .v1 .thesis b{ font-weight:400; font-style:italic; color:var(--c-acc); }
   .v1 .front-sub{ font-size:12.5px; line-height:1.65; color:var(--c-dim); max-width:36ch; }
 
+
+  /* ============ V1·B — MAISON BLANC (Onyx on white) ============ */
+  .v1w{
+    --c-bg:radial-gradient(120% 90% at 80% -12%, rgba(124,58,237,0.12), transparent 55%),
+           radial-gradient(110% 80% at 6% 108%, rgba(29,78,216,0.08), transparent 55%),
+           linear-gradient(168deg,#FEFDFB 0%,#F8F6FB 46%,#F4F2F7 100%);
+    --c-ink:#241F33; --c-dim:rgba(36,31,51,0.68); --c-faint:rgba(36,31,51,0.46);
+    --c-hair:rgba(36,31,51,0.16); --c-hair-soft:rgba(36,31,51,0.09);
+    --c-acc:#6D28D9; --c-acc-soft:rgba(109,40,217,0.42);
+    --c-grad:linear-gradient(92deg,#6D28D9,#2563EB);
+    --c-lead-bg:rgba(109,40,217,0.05); --c-tile-bg:rgba(109,40,217,0.045);
+    --c-mark:#5B21B6; --f-disp:var(--serif);
+  }
+  .v1w .card{ box-shadow:0 30px 72px rgba(43,32,74,0.28); }
+  .v1w .aurora{ position:absolute; inset:-30%; pointer-events:none; opacity:.9; filter:blur(46px); z-index:1; }
+  .v1w .aurora i{ position:absolute; border-radius:50%; display:block; }
+  .v1w .aurora i:nth-child(1){ width:46%; height:34%; left:52%; top:6%; background:rgba(124,58,237,0.16); animation:drift1 16s ease-in-out infinite alternate; }
+  .v1w .aurora i:nth-child(2){ width:40%; height:30%; left:-4%; top:66%; background:rgba(29,78,216,0.12); animation:drift2 20s ease-in-out infinite alternate; }
+  .v1w .aurora i:nth-child(3){ width:26%; height:20%; left:30%; top:38%; background:rgba(167,139,250,0.14); animation:drift1 24s ease-in-out infinite alternate-reverse; }
+  .v1w .ghost{
+    position:absolute; right:-3%; bottom:11%; z-index:1; font-family:var(--deva);
+    font-size:42cqw; line-height:1; color:transparent;
+    -webkit-text-stroke:1px rgba(36,31,51,0.13); pointer-events:none; user-select:none;
+  }
+  .v1w .front-center{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:5%; }
+  .v1w .brand{
+    font-family:var(--serif); font-weight:400; font-size:clamp(60px,16cqw,110px); line-height:0.94;
+    background:linear-gradient(100deg,#2A2440 0%,#6D28D9 28%,#1D4ED8 52%,#7C3AED 74%,#2A2440 100%);
+    background-size:220% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:shimmer 7s ease-in-out infinite;
+  }
+  .v1w .thesis{ font-family:var(--serif); font-size:clamp(19px,4.2cqw,27px); line-height:1.3; color:var(--c-ink); max-width:17ch; }
+  .v1w .thesis b{ font-weight:400; font-style:italic; color:var(--c-acc); }
+  .v1w .front-sub{ font-size:12.5px; line-height:1.65; color:var(--c-dim); max-width:36ch; }
+
   /* ============ V2 — ATELIER IVOIRE ============ */
   .v2{
     --c-bg:linear-gradient(175deg,#FCFAF5 0%,#F7F3EA 100%);
@@ -392,6 +427,57 @@
   .v6 .back-head h3{ line-height:1.3; }
   .v6 .lead h4,.v6 .rows h4{ font-size:15px; }
 
+
+  /* ============ V6 — THE COUNTER LEAFLET ============ */
+  .v6l .card{ box-shadow:0 30px 72px rgba(30,30,60,0.3); }
+  .v6lf, .v6lb{ background:#FDFDFC; color:#232336; padding:0; overflow:hidden; }
+  .v6l .band{
+    background:linear-gradient(100deg,#5B21B6,#2563EB);
+    color:#F6F4FF; padding:5.5% 8%; display:flex; justify-content:space-between; align-items:center;
+  }
+  .v6l .band .bm{ font-weight:700; font-size:13px; letter-spacing:0.02em; }
+  .v6l .band .pr{ font-family:"Archivo",sans-serif; font-size:9px; letter-spacing:0.2em; text-transform:uppercase; opacity:0.9; }
+  .v6lf .hero{ padding:7% 8% 3%; position:relative; }
+  .v6lf .hero h3{ font-family:"Archivo",sans-serif; font-weight:750; font-size:8cqw; line-height:1.12; color:#1B1B2E; letter-spacing:-0.01em; max-width:12ch; }
+  .v6lf .hero h3 i{ font-style:normal; background:linear-gradient(92deg,#6D28D9,#2563EB); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .v6lf .hero .dv6{ position:absolute; right:6%; top:2%; font-family:var(--deva); font-size:11cqw; color:rgba(109,40,217,0.14); }
+  .v6lf .ticks{ list-style:none; padding:2% 8% 0; flex:1; display:flex; flex-direction:column; justify-content:space-evenly; }
+  .v6lf .ticks li{ display:grid; grid-template-columns:24px 1fr; gap:0 12px; align-items:start; padding:1.8% 0; }
+  .v6lf .ticks .tk{
+    width:20px; height:20px; border-radius:50%; background:rgba(23,114,69,0.12); color:#177245;
+    display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; margin-top:1px;
+  }
+  .v6lf .ticks b{ font-size:12.5px; color:#1B1B2E; display:block; font-family:"Archivo",sans-serif; font-weight:650; }
+  .v6lf .ticks span{ font-size:10.5px; line-height:1.5; color:#5A5A72; }
+  .v6lf .rosette{
+    position:absolute; right:7%; bottom:24%; width:23%; aspect-ratio:1; border-radius:50%;
+    background:#E5A819; color:#3A2E08; transform:rotate(9deg);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:2px;
+    font-family:"Archivo",sans-serif; font-weight:750; font-size:9px; letter-spacing:0.06em; text-transform:uppercase;
+    box-shadow:0 6px 18px rgba(229,168,25,0.4);
+  }
+  .v6lf .rosette::before{ content:""; position:absolute; inset:-6px; border-radius:50%; border:2px dashed rgba(229,168,25,0.6); }
+  .v6l .helpline{
+    background:#F1F0F6; padding:4% 8%; display:flex; justify-content:space-between; align-items:center;
+    font-family:var(--mono); font-size:8.5px; letter-spacing:0.1em; color:#5A5A72; text-transform:uppercase;
+  }
+  .v6lb .cmp{ padding:5% 8% 0; }
+  .v6lb table{ width:100%; border-collapse:collapse; font-size:10.5px; }
+  .v6lb th{
+    font-family:"Archivo",sans-serif; font-weight:700; font-size:9px; letter-spacing:0.08em; text-transform:uppercase;
+    padding:8px 6px; border-bottom:2px solid #232336; text-align:left; color:#1B1B2E;
+  }
+  .v6lb th.j{ color:#5B21B6; text-align:center; } .v6lb th.o{ text-align:center; color:#8A8AA0; }
+  .v6lb td{ padding:8px 6px; border-bottom:1px solid rgba(35,35,54,0.12); color:#3A3A52; line-height:1.45; }
+  .v6lb td.j{ text-align:center; color:#177245; font-weight:700; }
+  .v6lb td.o{ text-align:center; font-weight:700; color:#B3232A; }
+  .v6lb td b{ color:#1B1B2E; }
+  .v6lb .steps6{ padding:4% 8% 0; display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+  .v6lb .st6{ border:1px solid rgba(35,35,54,0.14); border-radius:10px; padding:9px 10px; }
+  .v6lb .st6 .n6{ font-family:"Archivo",sans-serif; font-weight:750; font-size:13px; color:#5B21B6; }
+  .v6lb .st6 p{ font-size:9px; line-height:1.45; color:#5A5A72; margin-top:3px; }
+  .v6lb .fine6{ padding:3.5% 8% 0; font-size:7.5px; line-height:1.7; color:#8A8AA0; margin-top:auto; }
+
   /* ——— Closing notes ——— */
   .notes{ margin-top:70px; border-top:1px solid var(--page-hair); padding-top:40px; display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:32px; }
   .note h5{ font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:var(--lilac); margin-bottom:12px; }
@@ -422,9 +508,11 @@
 
   <nav class="vnav" aria-label="Versions">
     <a href="#v1">V1 &middot; Maison Onyx</a>
+    <a href="#v1w">V1&middot;B &middot; Maison Blanc</a>
     <a href="#v2">V2 &middot; Atelier Ivoire</a>
     <a href="#v4">V4 &middot; Obsidian Holo</a>
     <a href="#v5">V5 &middot; The Knowing Issue</a>
+    <a href="#v6l">V6 &middot; Counter Leaflet</a>
     <a href="#atelier">The Atelier &middot; 15 print concepts</a>
   </nav>
 
@@ -459,6 +547,139 @@
       <div class="slot">
         <div class="slot-label">Back</div>
         <article class="card" aria-label="V1 back">
+          <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+          
+          <div class="card-top"><span class="wordmark">blostem</span><span class="plaque">N&deg; 08</span></div>
+          <div class="back-head">
+            <span class="k">Why Jaano</span>
+            <h3>Know the person,<br>not just the paperwork.</h3>
+          </div>
+
+          <div class="lead">
+            <span class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>
+                <circle cx="10" cy="7" r="2.1" fill="none"/><circle cx="15.5" cy="12" r="2.1" fill="none"/><circle cx="7.5" cy="17" r="2.1" fill="none"/>
+              </svg>
+            </span>
+            <div>
+              <div class="tt"><h4>Your process, <span class="hl">not ours.</span></h4><span class="tag">The Jaano difference</span></div>
+              <p>Every journey, checklist, question set and screen is <b>configured to your
+              organisation</b> — white-label by design. Jaano bends to your process,
+              never the other way around.</p>
+            </div>
+          </div>
+
+          <div class="modes">
+            <span class="ml">Three ways to verify &mdash; one evidence trail</span>
+            <div class="modes-grid">
+              <div class="mode">
+                <span class="ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                    <circle cx="12" cy="8.5" r="3.2"/><path d="M5.5 20c.8-4 3.4-6 6.5-6s5.7 2 6.5 6"/>
+                  </svg>
+                </span>
+                <h5>Officer-led</h5>
+                <p>RBI V-CIP with your officials on a live call.</p>
+              </div>
+              <div class="mode">
+                <span class="ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="6.5" y="3.5" width="11" height="17" rx="2.5"/><circle cx="12" cy="10" r="2.2"/><path d="M8.8 16.5c.7-1.8 1.9-2.7 3.2-2.7s2.5.9 3.2 2.7"/>
+                  </svg>
+                </span>
+                <h5>Self-serve</h5>
+                <p>Customers complete it solo, in minutes.</p>
+              </div>
+              <div class="mode">
+                <span class="ic" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="6" width="14" height="14" rx="4"/>
+                    <circle cx="8.9" cy="12" r="0.9" fill="currentColor" stroke="none"/><circle cx="13.1" cy="12" r="0.9" fill="currentColor" stroke="none"/>
+                    <path d="M8.8 15.4c1.4 1.1 3 1.1 4.4 0"/>
+                    <path d="M19.2 2.6l.5 1.4 1.4.5-1.4.5-.5 1.4-.5-1.4-1.4-.5 1.4-.5z" fill="currentColor" stroke="none"/>
+                  </svg>
+                </span>
+                <h5>AI Avatar</h5>
+                <p>An AI avatar walks them through every step.</p>
+              </div>
+            </div>
+            <p class="mf">All three <b>multilingual</b> — built for Tier 2/3 India, and beyond BFSI.</p>
+          </div>
+
+          <ul class="rows">
+            <li>
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <circle cx="9.5" cy="12" r="5.4"/><circle cx="14.5" cy="12" r="5.4"/>
+                </svg>
+              </span>
+              <div>
+                <div class="tt"><h4>One call, <span class="hl">two jobs</span></h4><span class="tag">Most brands can&rsquo;t</span></div>
+                <p>Video KYC and the credit discussion, <b>merged into a single call</b> — or run apart. No second appointment.</p>
+              </div>
+            </li>
+            <li>
+              <span class="ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              <div>
+                <div class="tt"><h4>Every second <span class="hl">on the record</span></h4></div>
+                <p>Recorded sessions, <b>tamper-evident audit trails</b>, geo-verified in India.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="back-foot">
+            <div class="cta">
+              <strong>Launch with Blostem</strong>
+              <small>blostem.com &nbsp;&middot;&nbsp; partnership@blostem.com<br>+91&#8209;7428478926</small>
+            </div>
+            <div class="qr-cell">
+              <div class="qr" aria-label="QR code placeholder"><canvas class="qrc" width="29" height="29"></canvas></div>
+              <div class="qr-cap">Scan to know</div>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================== V1·B -->
+  <section class="version v1w" id="v1w">
+    <div class="vhead">
+      <span class="vno">Version I &middot; B</span>
+      <h2>Maison Blanc</h2>
+      <p>Maison Onyx in daylight — the identical composition and hues on a white ground: the same
+      dictionary entry, ghost जानो and Bodoni wordmark, with the violet-to-blue metal picking up
+      where the champagne left off.</p>
+    </div>
+    <div class="stage">
+      <div class="slot">
+        <div class="slot-label">Front</div>
+        <article class="card" aria-label="V1B front">
+          <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="ghost" aria-hidden="true">जानो</div>
+          <div class="card-top"><span class="wordmark">blostem</span><span class="plaque">N&deg; 08</span></div>
+          <div class="front-center">
+            <div class="dict"><span class="dv">जानो</span><span>/ jaa&middot;no /</span><em>verb, Hindi</em><span>— &ldquo;to know.&rdquo;</span></div>
+            <h3 class="brand">Jaano</h3>
+            <p class="thesis">Anyone can verify. <b>Jaano knows.</b></p>
+            <p class="front-sub">Officer-led video KYC, self-verification and AI-avatar-guided
+            journeys — each one ending in a record you can stand behind.</p>
+          </div>
+          <div class="chips">
+            <span>RBI V-CIP Ready</span><span>KYC + PD, One Call</span>
+            <span>AI Avatar + Self Modes</span><span>Configurable &middot; Multilingual</span>
+          </div>
+        </article>
+      </div>
+      <div class="slot">
+        <div class="slot-label">Back</div>
+        <article class="card" aria-label="V1B back">
           <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
           
           <div class="card-top"><span class="wordmark">blostem</span><span class="plaque">N&deg; 08</span></div>
@@ -882,6 +1103,63 @@
               <div class="qr-cap">Scan to know</div>
             </div>
           </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================== V6L -->
+  <section class="version v6l" id="v6l">
+    <div class="vhead">
+      <span class="vno">Version VI</span>
+      <h2>The Counter Leaflet</h2>
+      <p>The pamphlet every banker in the hall grew up handing out — tick-list benefits, a comparison
+      table, the rosette sticker, a helpline strip and honest fine print — rebuilt with restraint.
+      Familiarity is the intrigue: it reads instantly, because they&rsquo;ve read a thousand of them.</p>
+    </div>
+    <div class="stage">
+      <div class="slot">
+        <div class="slot-label">Front — the cover</div>
+        <article class="card v6lf" aria-label="V6 front">
+          <div class="band"><span class="bm">Jaano &middot; by Blostem</span><span class="pr">Video KYC + Video PD</span></div>
+          <div class="hero">
+            <span class="dv6" aria-hidden="true">जानो</span>
+            <h3>Know your customer. <i>In one call.</i></h3>
+          </div>
+          <ul class="ticks">
+            <li><span class="tk">&#10003;</span><div><b>KYC + credit discussion, merged</b><span>One video call, both jobs done. Most brands can&rsquo;t.</span></div></li>
+            <li><span class="tk">&#10003;</span><div><b>Three ways to verify</b><span>Officer-led V-CIP, self-serve, or AI-avatar-guided.</span></div></li>
+            <li><span class="tk">&#10003;</span><div><b>Every language</b><span>Journeys built for Tier 2/3 India — and beyond BFSI.</span></div></li>
+            <li><span class="tk">&#10003;</span><div><b>Sealed evidence</b><span>Recorded, hash-chained, geo-verified, replayable.</span></div></li>
+            <li><span class="tk">&#10003;</span><div><b>Your process, your brand</b><span>Configured per organisation. White-label by design.</span></div></li>
+          </ul>
+          <div class="rosette" aria-hidden="true"><span>No 2nd</span><span>appointment</span><span>ever</span></div>
+          <div class="helpline"><span>blostem.com</span><span>+91-7428478926</span><span>*T&amp;C: none hidden</span></div>
+        </article>
+      </div>
+      <div class="slot">
+        <div class="slot-label">Back — the comparison</div>
+        <article class="card v6lb" aria-label="V6 back">
+          <div class="band"><span class="bm">Why customers switch</span><span class="pr">N&deg; 08</span></div>
+          <div class="cmp">
+            <table>
+              <tr><th>Feature</th><th class="j">Jaano</th><th class="o">Others</th></tr>
+              <tr><td><b>KYC + PD in one call</b></td><td class="j">&#10003;</td><td class="o">&#10007;</td></tr>
+              <tr><td><b>AI avatar guide</b>, any language</td><td class="j">&#10003;</td><td class="o">&#10007;</td></tr>
+              <tr><td><b>Officer / self / avatar</b> modes</td><td class="j">&#10003;</td><td class="o">1 of 3</td></tr>
+              <tr><td><b>Hash-chained record</b>, geo-verified</td><td class="j">&#10003;</td><td class="o">?</td></tr>
+              <tr><td><b>White-label</b>, your process</td><td class="j">&#10003;</td><td class="o">&#10007;</td></tr>
+            </table>
+          </div>
+          <div class="steps6">
+            <div class="st6"><div class="n6">1</div><p>Share a link — no app, any device.</p></div>
+            <div class="st6"><div class="n6">2</div><p>Customer verifies — guided, in their language.</p></div>
+            <div class="st6"><div class="n6">3</div><p>You get the sealed, replayable record.</p></div>
+          </div>
+          <div class="fine6">Jaano is a Blostem product. &ldquo;Jaano&rdquo; — Hindi, verb: to know. RBI V-CIP-ready
+          officer-led mode; self-serve and AI-avatar journeys for verification beyond V-CIP. Configuration,
+          checklists, question sets and branding per organisation. Talk to us: partnership@blostem.com</div>
+          <div class="helpline"><span>blostem.com</span><span>partnership@blostem.com</span><span>GFF 2026</span></div>
         </article>
       </div>
     </div>
@@ -1679,6 +1957,43 @@
       </div>
     </div>
   </div>
+
+<style>
+    .serieslabel{
+    margin-top:72px; display:flex; align-items:center; gap:16px;
+    font-size:11px; letter-spacing:0.3em; text-transform:uppercase; color:var(--lilac);
+  }
+  .serieslabel::after{ content:""; flex:1; height:1px; background:var(--page-hair); }
+
+  /* ————— P20 THE MIRROR ————— */
+  .p20f{ background:linear-gradient(172deg,#191A1E,#101114); color:#E6E7EA; }
+  .p20f .mir{
+    flex:1; margin:7% 0 6%; border-radius:16px; position:relative; overflow:hidden;
+    background:
+      linear-gradient(118deg, transparent 42%, rgba(255,255,255,0.5) 47%, transparent 52%),
+      linear-gradient(160deg,#EDEFF3 0%,#B9BEC7 35%,#F2F4F7 52%,#9BA1AB 75%,#E4E7EC 100%);
+    border:1px solid rgba(230,231,234,0.3);
+    display:flex; align-items:flex-end; justify-content:center; padding-bottom:7%;
+  }
+  .p20f .mir span{ font-family:var(--mono); font-size:8.5px; letter-spacing:0.24em; color:#4A4F58; text-transform:uppercase; }
+  .p20f .line20{ font-family:var(--serif); font-size:6cqw; line-height:1.35; color:#F0F1F4; max-width:19ch; }
+  .p20f .line20 i{ color:#A78BFA; }
+  .p20b{ background:linear-gradient(172deg,#17181C,#0F1013); color:#E6E7EA; }
+  .p20b .frame{ flex:1; position:relative; margin:6% 2%; }
+  .p20b .frame i{ position:absolute; width:26px; height:26px; border:2.5px solid #A78BFA; }
+  .p20b .frame i:nth-child(1){ left:0; top:0; border-right:0; border-bottom:0; }
+  .p20b .frame i:nth-child(2){ right:0; top:0; border-left:0; border-bottom:0; }
+  .p20b .frame i:nth-child(3){ left:0; bottom:0; border-right:0; border-top:0; }
+  .p20b .frame i:nth-child(4){ right:0; bottom:0; border-left:0; border-top:0; }
+  .p20b .frame .inner20{
+    position:absolute; inset:14%; display:flex; flex-direction:column; justify-content:center; gap:14px; text-align:center;
+  }
+  .p20b .rec{ font-family:var(--mono); font-size:9px; letter-spacing:0.24em; color:#F87171; text-transform:uppercase; }
+  .p20b .msg20{ font-family:var(--serif); font-size:5.6cqw; line-height:1.4; color:#F0F1F4; }
+  .p20b .spec20{ font-size:10.5px; line-height:1.8; color:#9CA1AB; }
+  .p20b .spec20 b{ color:#E6E7EA; }
+  .p20b .foot20{ text-align:center; font-family:var(--mono); font-size:8.5px; letter-spacing:0.2em; color:#6E7480; text-transform:uppercase; }
+</style>
 
   <div class="serieslabel" id="town">Series III &middot; Talk of the Town — cards people do things with</div>
 
