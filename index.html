@@ -417,7 +417,7 @@
     <h1>The Jaano Collection</h1>
     <p>One card, six premium directions — same story in every one: configurability leads,
     the three verification modes (officer-led, self, AI avatar) read at a glance, and every
-    claim maps to shipped capability. Pick the skin; the substance is constant.</p>
+    claim maps to shipped capability. Pick the skin; the substance is constant. Below the six full renditions: the Exploration Wall — twenty further front-card concepts, each with its design idea.</p>
   </header>
 
   <nav class="vnav" aria-label="Versions">
@@ -427,6 +427,7 @@
     <a href="#v4">V4 &middot; Obsidian Holo</a>
     <a href="#v5">V5 &middot; The Knowing Issue</a>
     <a href="#v6">V6 &middot; Zari</a>
+    <a href="#wall">The Wall &middot; 20 concepts</a>
   </nav>
 
   <!-- ================================================== V1 -->
@@ -1150,6 +1151,581 @@
       </div>
     </div>
   </section>
+
+<style>
+  /* ============ THE EXPLORATION WALL — 20 concepts ============ */
+  .cwall{ padding-top:44px; }
+  .cgrid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:46px 38px; margin-top:30px; }
+  .cslot{ display:flex; flex-direction:column; gap:12px; }
+  .cmeta{ display:flex; align-items:baseline; gap:12px; }
+  .cmeta .cno{ font-family:var(--mono); font-size:10px; letter-spacing:0.2em; color:var(--lilac); }
+  .cmeta h3{ font-family:var(--serif); font-weight:400; font-size:19px; color:var(--page-ink); }
+  .cidea{ font-size:12.5px; line-height:1.6; color:var(--page-dim); }
+  .cc{
+    position:relative; overflow:hidden; aspect-ratio:62/82; width:100%;
+    border-radius:18px; padding:8% 8.5%; display:flex; flex-direction:column;
+    container-type:inline-size; border:1px solid rgba(237,230,214,0.13);
+    box-shadow:0 26px 60px rgba(0,0,0,0.45);
+  }
+  .cc > *{ position:relative; z-index:2; }
+  .cc .top{ display:flex; justify-content:space-between; align-items:center; font-size:9px; letter-spacing:0.22em; text-transform:uppercase; }
+  .cc .foot{ margin-top:auto; font-size:8.5px; letter-spacing:0.22em; text-transform:uppercase; }
+
+  /* C01 Specimen */
+  .c01{ background:linear-gradient(170deg,#F7F5EE,#EDE9DC); color:#242B36; }
+  .c01 .guill{ position:absolute; inset:0; z-index:1; opacity:0.5; }
+  .c01 .stamp{
+    position:absolute; z-index:1; top:38%; left:-6%; right:-6%; text-align:center;
+    font-family:"Archivo",sans-serif; font-weight:700; font-size:15cqw; letter-spacing:0.28em;
+    color:rgba(109,40,217,0.08); transform:rotate(-14deg);
+  }
+  .c01 .mid{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:5%; }
+  .c01 .kind{ font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:#7A716B; }
+  .c01 .brand{ font-family:var(--serif); font-size:15cqw; line-height:1; color:#242B36; }
+  .c01 .hook{ font-family:var(--serif); font-style:italic; font-size:4.6cqw; color:#4A423F; max-width:22ch; }
+  .c01 .mrz{
+    margin-top:auto; font-family:var(--mono); font-size:10.5px; letter-spacing:0.08em;
+    color:#3A4149; border-top:1.5px solid #242B36; padding-top:10px; line-height:1.8;
+    word-break:break-all;
+  }
+  /* C02 Redacted */
+  .c02{ background:linear-gradient(175deg,#1B1D22,#121317); color:#D9D5CB; }
+  .c02 .cls{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:9px; letter-spacing:0.22em; color:#8E8878; text-transform:uppercase; }
+  .c02 .file{ border:1px solid rgba(217,213,203,0.2); border-radius:10px; padding:7% 7.5%; margin-top:8%; display:flex; flex-direction:column; gap:14px; }
+  .c02 .brand{ font-family:var(--serif); font-size:12cqw; color:#EDE6D6; }
+  .c02 p{ font-family:var(--mono); font-size:11px; line-height:2; color:#B8B2A4; }
+  .c02 .red{ background:#0A0A0C; color:transparent; border-radius:2px; padding:1px 4px; transition:all .45s; cursor:default; }
+  .c02 .cc:hover .red{ }
+  .c02 .card-hover-note{ font-family:var(--mono); font-size:8.5px; letter-spacing:0.18em; color:#6E695E; text-transform:uppercase; }
+  .cc.c02:hover .red{ background:rgba(167,139,250,0.14); color:#EDE6D6; }
+  /* C03 Polygraph */
+  .c03{ background:linear-gradient(178deg,#F6F2E8,#EFE9DA); color:#292423; }
+  .c03 .chart{ flex:1; display:flex; align-items:center; }
+  .c03 svg{ width:100%; height:auto; }
+  .c03 .wave{ stroke:#B3232A; stroke-width:1.6; fill:none; stroke-dasharray:640; stroke-dashoffset:640; animation:draw 5s linear infinite; }
+  @keyframes draw{ 0%{ stroke-dashoffset:640; } 70%{ stroke-dashoffset:0; } 100%{ stroke-dashoffset:0; } }
+  .c03 .gridl{ stroke:rgba(41,36,35,0.1); stroke-width:1; }
+  .c03 .brand{ font-family:var(--serif); font-size:11cqw; }
+  .c03 .hook{ font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#8A2C30; }
+  /* C04 Guilloché */
+  .c04{ background:radial-gradient(120% 100% at 50% 0%,#12352A,#0A241C 70%); color:#D8CDA8; }
+  .c04 .rosette{ position:absolute; z-index:1; inset:auto -22% -30% auto; width:95%; opacity:0.55; }
+  .c04 .brand{ font-family:var(--serif); font-size:13cqw; color:#E7DDBB; }
+  .c04 .mid{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:6%; }
+  .c04 .hook{ font-family:var(--serif); font-style:italic; font-size:4.8cqw; max-width:20ch; color:#C9BE9B; }
+  .c04 .denom{ font-family:var(--serif); font-size:26px; color:#B9AD85; }
+  /* C05 Obscura */
+  .c05{ background:#060507; color:#CFC8BA; cursor:crosshair; }
+  .c05 .veil{
+    position:absolute; inset:0; z-index:3; pointer-events:none;
+    background:radial-gradient(circle 130px at var(--mx,68%) var(--my,38%), transparent 0 60px, rgba(6,5,7,0.94) 130px);
+    animation:roam 11s ease-in-out infinite alternate;
+  }
+  .c05:hover .veil{ animation:none; }
+  @keyframes roam{ 0%{ --mx:68%; --my:38%; } 25%{ --mx:30%; --my:30%; } 50%{ --mx:42%; --my:62%; } 100%{ --mx:64%; --my:55%; } }
+  @property --mx { syntax:'<percentage>'; inherits:false; initial-value:68%; }
+  @property --my { syntax:'<percentage>'; inherits:false; initial-value:38%; }
+  .c05 .mid{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:7%; }
+  .c05 .brand{ font-family:var(--serif); font-size:13cqw; color:#EDE6D6; }
+  .c05 .hook{ font-family:var(--serif); font-style:italic; font-size:5.4cqw; line-height:1.4; color:#B9B2A2; max-width:18ch; }
+  .c05 .foot{ color:#6B6559; }
+  /* C06 X-Ray */
+  .c06{ background:radial-gradient(110% 90% at 50% 30%,#0B2338,#050D16 75%); color:#9FC6E8; }
+  .c06 .scan{ position:absolute; z-index:1; left:12%; right:12%; top:16%; bottom:30%; }
+  .c06 .sil{ fill:none; stroke:rgba(159,198,232,0.75); stroke-width:1.4; filter:drop-shadow(0 0 6px rgba(125,232,240,0.6)); }
+  .c06 .scanline{ position:absolute; z-index:2; left:0; right:0; height:1.5px; background:linear-gradient(90deg,transparent,rgba(125,232,240,0.9),transparent); animation:scan 4.5s ease-in-out infinite alternate; top:20%; }
+  @keyframes scan{ from{ top:18%; } to{ top:68%; } }
+  .c06 .brand{ font-family:"Archivo",sans-serif; font-weight:600; letter-spacing:0.24em; font-size:6.5cqw; color:#D7E9F8; }
+  .c06 .hook{ margin-top:auto; font-family:var(--mono); font-size:10.5px; letter-spacing:0.12em; color:#7FA8CC; text-transform:uppercase; }
+  /* C07 The Interview */
+  .c07{ background:linear-gradient(180deg,#141210,#0B0A09); color:#D6CFC2; font-family:"Courier New",Courier,monospace; }
+  .c07 .script{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:16px; font-size:11.5px; line-height:1.75; }
+  .c07 .slug{ color:#8F887A; letter-spacing:0.06em; }
+  .c07 .char{ text-align:center; letter-spacing:0.18em; color:#EDE6D6; }
+  .c07 .dlg{ text-align:center; max-width:30ch; margin:0 auto; color:#C4BCAC; }
+  .c07 .action{ color:#A79F8F; }
+  .c07 .brand{ font-family:var(--serif); font-size:9cqw; color:#EDE6D6; text-align:center; }
+  /* C08 Chiaroscuro */
+  .c08{ background:radial-gradient(130% 110% at 18% 8%, #3B2E1E 0%, #17110C 42%, #070504 78%); color:#D9C9AC; }
+  .c08 .mid{ flex:1; display:flex; flex-direction:column; justify-content:flex-end; gap:5%; padding-bottom:6%; }
+  .c08 .brand{ font-family:"Cormorant Garamond",serif; font-weight:500; font-size:15cqw; color:#EFE2C6; }
+  .c08 .hook{ font-family:"Cormorant Garamond",serif; font-style:italic; font-size:5.6cqw; line-height:1.35; color:#C3B292; max-width:20ch; }
+  /* C09 Helvetic */
+  .c09{ background:#F4F4F2; color:#111; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; }
+  .c09 .rule{ position:absolute; z-index:1; left:8.5%; right:8.5%; top:26%; height:1px; background:#111; }
+  .c09 .big{ flex:1; display:flex; flex-direction:column; justify-content:center; font-weight:700; font-size:13.5cqw; line-height:1.02; letter-spacing:-0.01em; }
+  .c09 .big em{ font-style:normal; color:#E0301E; }
+  .c09 .sub{ font-size:11px; line-height:1.5; color:#444; max-width:30ch; }
+  .c09 .foot{ color:#777; }
+  /* C10 Bauhaus */
+  .c10{ background:#EFE7D8; color:#20242C; }
+  .c10 .geo{ position:absolute; z-index:1; inset:0; }
+  .c10 .mid{ flex:1; display:flex; flex-direction:column; justify-content:flex-end; gap:4%; }
+  .c10 .brand{ font-family:"Archivo",sans-serif; font-weight:700; font-size:11cqw; letter-spacing:0.02em; }
+  .c10 .hook{ font-size:11.5px; line-height:1.55; color:#4A4A48; max-width:26ch; }
+  /* C11 Op-Art Iris */
+  .c11{ background:#0D0C0F; color:#E8E4DA; display:flex; }
+  .c11 .iris{
+    position:absolute; z-index:1; width:120%; aspect-ratio:1; left:50%; top:42%; transform:translate(-50%,-50%);
+    background:repeating-radial-gradient(circle at 50% 50%, #E8E4DA 0 1.5px, #0D0C0F 1.5px 7px);
+    border-radius:50%; opacity:0.5; animation:irisPulse 9s ease-in-out infinite;
+  }
+  @keyframes irisPulse{ 0%,100%{ transform:translate(-50%,-50%) scale(1);} 50%{ transform:translate(-50%,-50%) scale(1.06);} }
+  .c11 .pupil{ position:absolute; z-index:1; width:15%; aspect-ratio:1; border-radius:50%; background:#A78BFA; left:50%; top:42%; transform:translate(-50%,-50%); box-shadow:0 0 40px rgba(167,139,250,0.7); }
+  .c11 .brand{ font-family:var(--serif); font-size:11cqw; text-align:center; }
+  .c11 .hook{ margin-top:auto; text-align:center; font-family:var(--serif); font-style:italic; font-size:4.8cqw; color:#B9B4A8; }
+  /* C12 Topograph */
+  .c12{ background:linear-gradient(180deg,#101816,#0A100E); color:#BFD9C9; }
+  .c12 .topo{ position:absolute; z-index:1; inset:-10%; opacity:0.6; }
+  .c12 .topo path{ fill:none; stroke:rgba(191,217,201,0.4); stroke-width:1; }
+  .c12 .topo path.hot{ stroke:#8FE0B0; stroke-width:1.4; filter:drop-shadow(0 0 5px rgba(143,224,176,0.5)); }
+  .c12 .brand{ font-family:var(--serif); font-size:12cqw; color:#E4F0E7; }
+  .c12 .hook{ margin-top:auto; font-family:var(--serif); font-style:italic; font-size:4.9cqw; color:#9DBBA9; max-width:20ch; }
+  /* C13 Constellation */
+  .c13{ background:radial-gradient(120% 100% at 70% 0%,#131A33,#080B18 70%); color:#D5DCF2; }
+  .c13 .sky{ position:absolute; z-index:1; inset:0; }
+  .c13 .sky line{ stroke:rgba(213,220,242,0.3); stroke-width:0.8; }
+  .c13 .sky circle{ fill:#D5DCF2; }
+  .c13 .sky circle.br{ fill:#A78BFA; filter:drop-shadow(0 0 4px rgba(167,139,250,0.9)); }
+  .c13 .brand{ font-family:var(--serif); font-size:12cqw; }
+  .c13 .hook{ margin-top:auto; font-family:var(--serif); font-style:italic; font-size:4.9cqw; color:#A8B1D6; max-width:22ch; }
+  /* C14 Liquid Chrome */
+  .c14{ background:linear-gradient(170deg,#1A1B1E,#0E0F11); color:#DDE0E6; }
+  .c14 .blob{
+    position:absolute; z-index:1; width:85%; aspect-ratio:1; left:50%; top:46%; transform:translate(-50%,-50%);
+    border-radius:44% 56% 58% 42% / 48% 42% 58% 52%;
+    background:conic-gradient(from 30deg, #F2F4F8, #9BA3B0, #5E646E, #E8EBF1, #7C828C, #F2F4F8);
+    filter:blur(1px) saturate(0.9); opacity:0.9;
+    animation:blobMorph 12s ease-in-out infinite alternate;
+  }
+  @keyframes blobMorph{
+    from{ border-radius:44% 56% 58% 42% / 48% 42% 58% 52%; transform:translate(-50%,-50%) rotate(0deg); }
+    to{ border-radius:56% 44% 42% 58% / 42% 58% 44% 56%; transform:translate(-50%,-50%) rotate(24deg); }
+  }
+  .c14 .blob::after{ content:""; position:absolute; inset:12%; border-radius:inherit; background:radial-gradient(60% 60% at 35% 30%, rgba(255,255,255,0.9), transparent 60%); mix-blend-mode:screen; }
+  .c14 .brand{
+    font-family:"Archivo",sans-serif; font-weight:700; font-size:11cqw; letter-spacing:0.1em;
+    background:linear-gradient(105deg,#FDFDFF 0%,#8D939E 30%,#F4F6FA 50%,#6A707A 72%,#FDFDFF 100%);
+    background-size:200% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:shimmer 6s ease-in-out infinite;
+  }
+  .c14 .hook{ margin-top:auto; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:#9AA0AB; }
+  /* C15 Blueprint */
+  .c15{
+    background:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px) 0 0/28px 28px,
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px) 0 0/28px 28px,
+      linear-gradient(175deg,#123A63,#0C2846);
+    color:#D7E6F5; font-family:"Archivo",sans-serif;
+  }
+  .c15 .draw{ flex:1; display:flex; align-items:center; }
+  .c15 svg{ width:100%; height:auto; }
+  .c15 .ln{ fill:none; stroke:#D7E6F5; stroke-width:1.2; }
+  .c15 .dim{ stroke:rgba(215,230,245,0.5); stroke-width:0.8; }
+  .c15 text{ font-family:var(--mono); font-size:5.5px; fill:rgba(215,230,245,0.75); letter-spacing:0.08em; }
+  .c15 .brand{ font-weight:600; letter-spacing:0.22em; font-size:6cqw; }
+  .c15 .hook{ font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:#9DBAD6; }
+  /* C16 Negative Space */
+  .c16{ background:#F9F7F1; color:#1E1B17; }
+  .c16 .mid{ flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:18px; }
+  .c16 .line1{ font-family:var(--serif); font-style:italic; font-size:5.4cqw; color:#1E1B17; }
+  .c16 .line2{ font-size:10px; letter-spacing:0.26em; text-transform:uppercase; color:#6D28D9; }
+  .c16 .top,.c16 .foot{ color:#9A948A; }
+  /* C17 Hash Rain */
+  .c17{ background:#0A0C0A; color:#9BAA9B; font-family:var(--mono); }
+  .c17 .rain{ position:absolute; z-index:1; inset:6% 8%; font-size:10px; line-height:2.1; letter-spacing:0.12em; color:rgba(155,170,155,0.28); word-break:break-all; }
+  .c17 .rain b{ font-weight:400; color:#EDE6D6; background:rgba(167,139,250,0.12); border-radius:3px; padding:0 3px; }
+  .c17 .brand{ font-family:var(--serif); font-size:11cqw; color:#EDE6D6; }
+  .c17 .hook{ margin-top:auto; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#7C8A7C; }
+  /* C18 Contact Sheet */
+  .c18{ background:#141210; color:#D8D2C6; }
+  .c18 .strip{ flex:1; display:flex; flex-direction:column; justify-content:center; gap:10px; }
+  .c18 .frame{
+    border:1px solid rgba(216,210,198,0.25); border-radius:4px; padding:9px 12px;
+    display:flex; justify-content:space-between; align-items:center;
+    background:linear-gradient(90deg, rgba(167,139,250,0.06), transparent);
+    font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase;
+  }
+  .c18 .frame i{ font-style:normal; color:#8F887B; }
+  .c18 .sprock{ display:flex; justify-content:space-between; padding:0 4px; }
+  .c18 .sprock span{ width:7px; height:9px; border-radius:2px; background:rgba(216,210,198,0.22); }
+  .c18 .brand{ font-family:var(--serif); font-size:10cqw; color:#EDE6D6; }
+  .c18 .hook{ margin-top:auto; font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#8F887B; }
+  /* C19 Members' Club */
+  .c19{
+    background:
+      radial-gradient(0.9px 0.9px at 9px 9px, rgba(0,0,0,0.35) 1px, transparent 1.1px) 0 0/18px 18px,
+      linear-gradient(172deg,#4A1620,#33101A 60%,#260C13);
+    color:#E6D3B3;
+  }
+  .c19 .brass{ border:1px solid rgba(230,211,179,0.4); border-radius:12px; flex:1; margin-top:7%; padding:9% 8%; display:flex; flex-direction:column; justify-content:center; text-align:center; gap:7%; }
+  .c19 .small{ font-size:9px; letter-spacing:0.34em; text-transform:uppercase; color:#B99F78; }
+  .c19 .brand{ font-family:var(--serif); font-size:12cqw; color:#F2E3C4; }
+  .c19 .hook{ font-family:var(--serif); font-style:italic; font-size:4.9cqw; color:#D3BC95; }
+  /* C20 Sonar */
+  .c20{ background:radial-gradient(120% 110% at 50% 46%, #0C2B2B 0%, #061414 65%, #040D0D 100%); color:#BFE3DD; }
+  .c20 .rings{ position:absolute; z-index:1; left:50%; top:44%; transform:translate(-50%,-50%); width:10px; height:10px; }
+  .c20 .rings i{
+    position:absolute; inset:0; border-radius:50%; border:1px solid rgba(140,224,208,0.7);
+    animation:ping 4.2s cubic-bezier(0,0.4,0.6,1) infinite;
+  }
+  .c20 .rings i:nth-child(2){ animation-delay:1.4s; } .c20 .rings i:nth-child(3){ animation-delay:2.8s; }
+  @keyframes ping{ from{ transform:scale(1); opacity:0.9; } to{ transform:scale(34); opacity:0; } }
+  .c20 .dot{ position:absolute; z-index:1; left:50%; top:44%; transform:translate(-50%,-50%); width:9px; height:9px; border-radius:50%; background:#8CE0D0; box-shadow:0 0 18px rgba(140,224,208,0.9); }
+  .c20 .brand{ font-family:var(--serif); font-size:12cqw; color:#E2F4F0; }
+  .c20 .hook{ margin-top:auto; font-family:var(--serif); font-style:italic; font-size:4.9cqw; color:#9CC8C0; }
+
+  @media (prefers-reduced-motion: reduce){
+    .c03 .wave,.c05 .veil,.c06 .scanline,.c11 .iris,.c14 .blob,.c14 .brand,.c20 .rings i{ animation:none; }
+    .c02 .red{ background:rgba(167,139,250,0.14); color:#EDE6D6; }
+  }
+  @media print{
+    .c05 .veil{ background:radial-gradient(circle 130px at 60% 42%, transparent 0 60px, rgba(6,5,7,0.94) 130px); }
+    .c03 .wave{ stroke-dashoffset:0; animation:none; }
+  }
+</style>
+
+<section class="version cwall" id="wall">
+  <div class="vhead">
+    <span class="vno">The Exploration Wall</span>
+    <h2>Twenty further directions</h2>
+    <p>Front-card concepts, one aesthetic risk each — abstract, editorial, cinematic, cryptographic.
+    Several carry an intrigue mechanic: redactions that reveal on hover, a spotlight that roams until
+    you steer it, a polygraph that never stops writing. Any of these can be developed into a full
+    front + back rendition like V1–V6.</p>
+  </div>
+  <div class="cgrid">
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C01</span><h3>Specimen</h3></div>
+      <article class="cc c01" aria-label="Concept 1, Specimen">
+        <svg class="guill" viewBox="0 0 400 530" aria-hidden="true">
+          <g fill="none" stroke="rgba(109,40,217,0.16)" stroke-width="0.7">
+            <ellipse cx="200" cy="120" rx="190" ry="60"/><ellipse cx="200" cy="120" rx="170" ry="80"/>
+            <ellipse cx="200" cy="120" rx="150" ry="95" transform="rotate(14 200 120)"/>
+            <ellipse cx="200" cy="440" rx="190" ry="55"/><ellipse cx="200" cy="440" rx="165" ry="75" transform="rotate(-12 200 440)"/>
+          </g>
+        </svg>
+        <div class="stamp">SPECIMEN</div>
+        <div class="top"><span>Blostem</span><span>Type P — Person</span></div>
+        <div class="mid">
+          <span class="kind">Identity Instrument &middot; N&deg; 08</span>
+          <div class="brand">Jaano</div>
+          <div class="hook">The document is easy. The person is the point.</div>
+        </div>
+        <div class="mrz">P&lt;JAANO&lt;&lt;KNOWS&lt;&lt;ANYONE&lt;CAN&lt;VERIFY&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>GFF2026&lt;&lt;8BLOSTEM&lt;&lt;VCIP&lt;READY&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;08</div>
+      </article>
+      <p class="cidea">A passport specimen page — the universal artefact of “being known.” The MRZ line spells out the pitch.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C02</span><h3>Redacted</h3></div>
+      <article class="cc c02" aria-label="Concept 2, Redacted">
+        <div class="cls"><span>Eyes only</span><span>File N&deg; 08</span></div>
+        <div class="file">
+          <div class="brand">Jaano</div>
+          <p>Subject can present <span class="red">a perfect document</span>.<br>
+          Subject cannot fake <span class="red">being present</span>.<br>
+          Recommendation: <span class="red">stop verifying, start knowing</span>.</p>
+          <span class="card-hover-note">&#9654; Hover to declassify</span>
+        </div>
+        <div class="foot" style="color:#6E695E;">Blostem &middot; GFF 2026</div>
+      </article>
+      <p class="cidea">A dossier that declassifies under the reader’s cursor — the intrigue is doing the reveal yourself.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C03</span><h3>Polygraph</h3></div>
+      <article class="cc c03" aria-label="Concept 3, Polygraph">
+        <div class="top" style="color:#8A8378;"><span>Blostem</span><span>Ch. 08 — live</span></div>
+        <div class="chart">
+          <svg viewBox="0 0 400 190" aria-hidden="true">
+            <g class="gridl">
+              <line x1="0" y1="40" x2="400" y2="40"/><line x1="0" y1="95" x2="400" y2="95"/><line x1="0" y1="150" x2="400" y2="150"/>
+            </g>
+            <path class="wave" d="M0 95 L60 95 70 88 80 100 95 95 130 95 138 60 146 128 154 95 210 95 220 90 230 98 260 95 300 95 308 30 318 152 328 95 400 95"/>
+          </svg>
+        </div>
+        <div class="brand">Jaano</div>
+        <div class="hook">Lies have a frequency.</div>
+        <div class="foot" style="color:#8A8378; margin-top:14px;">Every session, on the record</div>
+      </article>
+      <p class="cidea">A truth instrument that never stops writing — the needle spikes exactly where a story breaks.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C04</span><h3>Guilloch&eacute;</h3></div>
+      <article class="cc c04" aria-label="Concept 4, Guilloché">
+        <svg class="rosette" viewBox="0 0 200 200" aria-hidden="true">
+          <g fill="none" stroke="rgba(216,205,168,0.5)" stroke-width="0.5">
+            <circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="84"/><circle cx="100" cy="100" r="70"/>
+            <ellipse cx="100" cy="100" rx="96" ry="34"/><ellipse cx="100" cy="100" rx="96" ry="34" transform="rotate(45 100 100)"/>
+            <ellipse cx="100" cy="100" rx="96" ry="34" transform="rotate(90 100 100)"/><ellipse cx="100" cy="100" rx="96" ry="34" transform="rotate(135 100 100)"/>
+            <ellipse cx="100" cy="100" rx="72" ry="18" transform="rotate(22 100 100)"/><ellipse cx="100" cy="100" rx="72" ry="18" transform="rotate(67 100 100)"/>
+            <ellipse cx="100" cy="100" rx="72" ry="18" transform="rotate(112 100 100)"/><ellipse cx="100" cy="100" rx="72" ry="18" transform="rotate(157 100 100)"/>
+          </g>
+        </svg>
+        <div class="top" style="color:#A99E7C;"><span>Blostem</span><span>Series 2026</span></div>
+        <div class="mid">
+          <div class="brand">Jaano</div>
+          <div class="hook">As hard to fake as money should be.</div>
+        </div>
+        <div class="foot" style="color:#A99E7C; display:flex; justify-content:space-between;"><span>N&deg; 08</span><span class="denom" style="font-size:16px;">&#10687;</span></div>
+      </article>
+      <p class="cidea">Banknote engraving — machine-turned lattice that forgers hate, applied to the currency of trust.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C05</span><h3>Obscura</h3></div>
+      <article class="cc c05" aria-label="Concept 5, Obscura">
+        <div class="veil" aria-hidden="true"></div>
+        <div class="top" style="color:#6B6559;"><span>Blostem</span><span>N&deg; 08</span></div>
+        <div class="mid">
+          <div class="brand">Jaano</div>
+          <div class="hook">Who&rsquo;s really on the other side of the call?</div>
+        </div>
+        <div class="foot">Move the light. Find out.</div>
+      </article>
+      <p class="cidea">A card in darkness, read through a roaming spotlight — steer it with your cursor. Verification as illumination.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C06</span><h3>Backscatter</h3></div>
+      <article class="cc c06" aria-label="Concept 6, Backscatter">
+        <div class="top" style="color:#7FA8CC;"><span>Blostem</span><span>Scan 08</span></div>
+        <svg class="scan" viewBox="0 0 200 240" aria-hidden="true">
+          <g class="sil">
+            <circle cx="100" cy="70" r="34"/>
+            <path d="M40 210 C40 150 70 130 100 130 C130 130 160 150 160 210"/>
+            <path d="M84 62 q16 -14 32 0" opacity="0.6"/>
+          </g>
+        </svg>
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="brand" style="margin-top:auto;">JAANO</div>
+        <div class="hook">See who&rsquo;s really there.</div>
+      </article>
+      <p class="cidea">An airport backscatter for identity — the sweep line suggests liveness and deepfake defense without saying either word.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C07</span><h3>The Interview</h3></div>
+      <article class="cc c07" aria-label="Concept 7, The Interview">
+        <div class="top" style="color:#8F887A;"><span>Blostem</span><span>Scene 08</span></div>
+        <div class="script">
+          <div class="slug">INT. VIDEO CALL &mdash; 11:42 AM</div>
+          <div class="action">The officer leans in. Every word,<br>every frame &mdash; recorded.</div>
+          <div class="char">OFFICER</div>
+          <div class="dlg">Tell me about the loan.</div>
+          <div class="slug">[ THE DISCUSSION IS NOW EVIDENCE ]</div>
+        </div>
+        <div class="brand">Jaano</div>
+      </article>
+      <p class="cidea">The personal discussion as a screenplay — because with Jaano, the interview finally has a script that survives.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C08</span><h3>Chiaroscuro</h3></div>
+      <article class="cc c08" aria-label="Concept 8, Chiaroscuro">
+        <div class="top" style="color:#8F7E5F;"><span>Blostem</span><span>N&deg; 08</span></div>
+        <div class="mid">
+          <div class="brand">Jaano</div>
+          <div class="hook">The truth shows up in good light.</div>
+        </div>
+        <div class="foot" style="color:#8F7E5F;">Video KYC &middot; Video PD &middot; On the record</div>
+      </article>
+      <p class="cidea">Baroque single-source light on near-black — old-master gravitas for a platform whose job is illumination.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C09</span><h3>Helvetic</h3></div>
+      <article class="cc c09" aria-label="Concept 9, Helvetic">
+        <div class="top" style="color:#777;"><span>Blostem</span><span>N&deg; 08</span></div>
+        <div class="rule" aria-hidden="true"></div>
+        <div class="big">Know<br>your<br>customer<em>.</em></div>
+        <div class="sub">Not a checkbox. A verb. Jaano — video KYC, video PD and guided journeys that end in evidence.</div>
+        <div class="foot">Jaano &middot; blostem.com</div>
+      </article>
+      <p class="cidea">International-style typography plays the regulator’s own phrase back as a promise. One red full stop.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C10</span><h3>Bauhaus</h3></div>
+      <article class="cc c10" aria-label="Concept 10, Bauhaus">
+        <svg class="geo" viewBox="0 0 200 264" aria-hidden="true">
+          <circle cx="146" cy="70" r="44" fill="#1F3A93" opacity="0.9"/>
+          <circle cx="146" cy="70" r="18" fill="#EFE7D8"/>
+          <circle cx="146" cy="70" r="8" fill="#20242C"/>
+          <rect x="24" y="118" width="88" height="10" fill="#C33C2E"/>
+          <path d="M24 64 L92 26 L92 102 Z" fill="#D9A62E" opacity="0.92"/>
+          <line x1="24" y1="150" x2="176" y2="150" stroke="#20242C" stroke-width="2"/>
+        </svg>
+        <div class="mid">
+          <div class="brand">JAANO</div>
+          <div class="hook">Form follows trust. An eye, a signal, a record — assembled.</div>
+        </div>
+        <div class="foot" style="color:#8A857B;">Blostem &middot; GFF 2026</div>
+      </article>
+      <p class="cidea">Geometry as identity: the circle is an eye, the triangle a signal, the bar a ledger line. Abstract but legible.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C11</span><h3>Iris</h3></div>
+      <article class="cc c11" aria-label="Concept 11, Iris">
+        <div class="iris" aria-hidden="true"></div>
+        <div class="pupil" aria-hidden="true"></div>
+        <div class="top" style="color:#8B879C;"><span>Blostem</span><span>N&deg; 08</span></div>
+        <div class="brand" style="margin-top:auto;">Jaano</div>
+        <div class="hook">The eye that knows.</div>
+      </article>
+      <p class="cidea">Op-art moiré rings breathe like an iris; the violet pupil fixes on the viewer. Pure abstraction, instantly ocular.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C12</span><h3>Contour</h3></div>
+      <article class="cc c12" aria-label="Concept 12, Contour">
+        <svg class="topo" viewBox="0 0 220 290" aria-hidden="true">
+          <path d="M30 240 C10 190 40 150 80 145 C130 140 150 100 140 60 C132 30 90 20 60 40"/>
+          <path d="M45 245 C25 200 52 162 88 158 C142 152 162 105 152 62 C144 30 100 12 68 30"/>
+          <path class="hot" d="M60 250 C42 210 66 174 96 170 C154 163 174 110 164 64 C156 28 110 4 76 22"/>
+          <path d="M75 255 C58 220 80 186 104 182 C166 174 186 115 176 66"/>
+          <path d="M90 260 C74 230 94 198 112 194 C178 184 198 120 188 68"/>
+        </svg>
+        <div class="top" style="color:#7E9C8B;"><span>Blostem</span><span>N&deg; 08</span></div>
+        <div class="brand" style="margin-top:auto;">Jaano</div>
+        <div class="hook">No two journeys alike. Every one mapped.</div>
+      </article>
+      <p class="cidea">Contour lines read as terrain and fingerprint at once — configurability drawn as cartography.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C13</span><h3>Constellation</h3></div>
+      <article class="cc c13" aria-label="Concept 13, Constellation">
+        <svg class="sky" viewBox="0 0 200 264" aria-hidden="true">
+          <line x1="40" y1="60" x2="92" y2="88"/><line x1="92" y1="88" x2="140" y2="52"/>
+          <line x1="92" y1="88" x2="110" y2="140"/><line x1="110" y1="140" x2="160" y2="170"/>
+          <line x1="110" y1="140" x2="66" y2="168"/>
+          <circle cx="40" cy="60" r="2"/><circle cx="140" cy="52" r="2"/><circle cx="66" cy="168" r="2"/>
+          <circle cx="160" cy="170" r="2"/><circle cx="92" cy="88" r="2.6" class="br"/><circle cx="110" cy="140" r="2.6" class="br"/>
+          <circle cx="30" cy="200" r="1.2"/><circle cx="176" cy="96" r="1.2"/><circle cx="150" cy="230" r="1.2"/><circle cx="58" cy="30" r="1.2"/>
+        </svg>
+        <div class="top" style="color:#8791B8;"><span>Blostem</span><span>N&deg; 08</span></div>
+        <div class="brand" style="margin-top:auto;">Jaano</div>
+        <div class="hook">Every identity leaves a pattern.</div>
+      </article>
+      <p class="cidea">Signals joined into a constellation — scattered data points that only make a shape when you know how to look.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C14</span><h3>Mercury</h3></div>
+      <article class="cc c14" aria-label="Concept 14, Mercury">
+        <div class="blob" aria-hidden="true"></div>
+        <div class="top" style="color:#9AA0AB;"><span>Blostem</span><span>N&deg; 08</span></div>
+        <div class="brand" style="margin-top:auto;">JAANO</div>
+        <div class="hook">Fluid journeys. Solid proof.</div>
+      </article>
+      <p class="cidea">Liquid chrome — a molten form that never repeats, rendered in mirror-metal. Y2K-luxe abstraction.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C15</span><h3>Blueprint</h3></div>
+      <article class="cc c15" aria-label="Concept 15, Blueprint">
+        <div class="top" style="color:#9DBAD6;"><span>Blostem Works</span><span>Dwg. 08 rev. C</span></div>
+        <div class="draw">
+          <svg viewBox="0 0 400 220" aria-hidden="true">
+            <g class="ln">
+              <rect x="60" y="40" width="170" height="120" rx="8"/>
+              <circle cx="145" cy="88" r="22"/>
+              <path d="M118 140 c8 -18 46 -18 54 0"/>
+              <path d="M230 100 L300 100 L300 60 L340 80 L300 100 L300 140 L340 120"/>
+            </g>
+            <g class="dim">
+              <line x1="60" y1="180" x2="230" y2="180"/><line x1="60" y1="174" x2="60" y2="186"/><line x1="230" y1="174" x2="230" y2="186"/>
+            </g>
+            <text x="120" y="192">ONE CALL — TWO JOBS</text>
+            <text x="250" y="52">EVIDENCE OUT</text>
+          </svg>
+        </div>
+        <div class="brand">JAANO</div>
+        <div class="hook">The machinery of knowing.</div>
+      </article>
+      <p class="cidea">A technical drawing of the trust machine — dimensioned, revisioned, engineered. Speaks to builders.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C16</span><h3>The Pause</h3></div>
+      <article class="cc c16" aria-label="Concept 16, The Pause">
+        <div class="top"><span>Blostem</span><span>N&deg; 08</span></div>
+        <div class="mid">
+          <div class="line1">Most verification is theatre.</div>
+          <div class="line2">Jaano is evidence</div>
+        </div>
+        <div class="foot">blostem.com</div>
+      </article>
+      <p class="cidea">One sentence in an empty room. The quietest card in the hall — which is exactly why it gets read.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C17</span><h3>Checksum</h3></div>
+      <article class="cc c17" aria-label="Concept 17, Checksum">
+        <div class="rain" aria-hidden="true">
+          8f2a c1d9 44e0 b7a3 90fc 5d21 ee83 07b4 6a5f d2c8 31b9 f04e 7c6d a8e2 19f5 03bd
+          e6a1 4c72 <b>jaano&nbsp;=&nbsp;sha256(every&nbsp;second)</b> 8d30 b5f7 261c 9ae4 70d5 fb18 42c6 e793
+          05af c8d1 3e62 97b0 f4a5 1d8e 6b23 a0f9 5748 cd16 82e3 b94a 0f67 d51c 38ea 7b02
+          94d6 e1f8 4a30 c7b5 268d 5f91 a3e7 0c44 b8f2 63d0 17ac e95b 40f6 8b21 d7c3 52e9
+        </div>
+        <div class="top" style="color:#7C8A7C;"><span>Blostem</span><span>Block 08</span></div>
+        <div class="brand" style="margin-top:auto;">Jaano</div>
+        <div class="hook">Trust, chained. Tamper and the math tells.</div>
+      </article>
+      <p class="cidea">The hash-chained audit trail made visible — one legible line of meaning inside the noise.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C18</span><h3>Contact Sheet</h3></div>
+      <article class="cc c18" aria-label="Concept 18, Contact Sheet">
+        <div class="top" style="color:#8F887B;"><span>Blostem</span><span>Roll 08</span></div>
+        <div class="strip">
+          <div class="sprock" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="frame"><span>Frame 01</span><i>Consent</i></div>
+          <div class="frame"><span>Frame 02</span><i>Documents</i></div>
+          <div class="frame"><span>Frame 03</span><i>The discussion</i></div>
+          <div class="frame"><span>Frame 04</span><i>Liveness</i></div>
+          <div class="sprock" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="brand">Jaano</div>
+        <div class="hook">Every frame is evidence.</div>
+      </article>
+      <p class="cidea">A photographer’s contact sheet of the journey — “on the record” shown as literal film.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C19</span><h3>The Club</h3></div>
+      <article class="cc c19" aria-label="Concept 19, The Club">
+        <div class="top" style="color:#B99F78;"><span>Blostem</span><span>N&deg; 08</span></div>
+        <div class="brass">
+          <div class="small">By introduction only</div>
+          <div class="brand">Jaano</div>
+          <div class="hook">Your customers — known by name, not just number.</div>
+          <div class="small">You are invited to know</div>
+        </div>
+      </article>
+      <p class="cidea">Oxblood leather and brass — membership-club codes recast: onboarding as induction, not processing.</p>
+    </div>
+
+    <div class="cslot">
+      <div class="cmeta"><span class="cno">C20</span><h3>Sonar</h3></div>
+      <article class="cc c20" aria-label="Concept 20, Sonar">
+        <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="dot" aria-hidden="true"></div>
+        <div class="top" style="color:#7FA79F;"><span>Blostem</span><span>Ping 08</span></div>
+        <div class="brand" style="margin-top:auto;">Jaano</div>
+        <div class="hook">Truth has a signature.</div>
+      </article>
+      <p class="cidea">A single voice pings outward and what returns is a signature — verification as echolocation.</p>
+    </div>
+
+  </div>
+</section>
 
   <section class="notes">
     <div class="note">
